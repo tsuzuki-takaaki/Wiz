@@ -1,0 +1,22 @@
+<!-- 全体のトップページ -->
+<div class="top-main">
+  <h2>Lets share your story</h2>
+</div>
+<div class="top-content">
+  <% @posts.each do |post| %>
+   <div class="card">
+    <%= link_to("/posts/#{post.id}") do %>
+     <% user = User.find_by(id: post.user_id) %>
+     <div class="card-username">
+      <p><%= user.name %></p>
+     </div>
+     <div class="card-profile">
+      <p>国:<%= post.country %></p>
+      <p>期間:<%= post.howlong %></p>
+      <p>ビザ:<%= post.visa %></p>
+      <p>学校名:<%= post.schoolname %></p>
+     </div>
+    <% end %>
+   </div>
+  <% end %>
+</div>

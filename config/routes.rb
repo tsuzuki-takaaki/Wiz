@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  #homecontroller
+  get "/" => "home#top"
+  get "home/usa" => "home#usa"
+  get "home/uk" => "home#uk"
+  get "home/canada" => "home#canada"
+  get "home/australia" => "home#australia"
+  get "home/newzealand" => "home#newzealand"
+  get "home/southafrica" => "home#southafrica"
+  get "home/malta" => "home#malta"
+  get "home/philippines"
+
 end
