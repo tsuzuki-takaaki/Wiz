@@ -1,0 +1,17 @@
+<!-- 投稿編集ページ -->
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">編集する</h1>
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+      <div class="form">
+        <div class="form-body">
+          <input name="country" value="<%= @post.country %>">
+          <input name="howlong" value="<%= @post.howlong %>">
+          <input name="visa" value="<%= @post.visa %>">
+          <input name="schoolname" value="<%= @post.schoolname %>">
+          <input type="submit" value="保存">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

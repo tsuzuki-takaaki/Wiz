@@ -1,0 +1,35 @@
+.photopost {
+  height: 250px;
+  width: 250px;
+}
+
+.form-content {
+  position: absolute;
+  left: 35%;
+  top: 50px;
+}
+.form {
+  font-size: 20px;
+  padding-top: 40px;
+}
+
+.button {
+  display       : inline-block;
+  border-radius : 6%;
+  font-size     : 17pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 15px 48px;
+  background    : #000066;
+  color         : #ffffff;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 6px 6px 3px #666666;
+  border        : 2px solid #000066;
+  margin-top: 20px;
+}
+.button:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
+}

@@ -45,7 +45,7 @@
               <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
             </li>
             <li>
-              <%= button_to("logout", "/logout") %>
+              <%= link_to("logout", "/logout", {method: "post"}) %>
             </li>
           <% end %>
           <% if !@current_user %>

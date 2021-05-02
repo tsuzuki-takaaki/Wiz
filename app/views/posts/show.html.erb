@@ -1,0 +1,26 @@
+<!-- 投稿詳細ページ -->
+<div class="post-user-name">
+  <%= @user.name %>
+</div>
+
+<div class="post-content">
+ <img src=<%= "/#{@post.image_name1}" %> class="photopost">
+ <p>国:<%= @post.country %></p>
+ <p>地域:<%= @post.city %></p>
+ <p>期間:<%= @post.howlong %></p>
+ <p>ビザ:<%= @post.visa %></p>
+ <p>費用:<%= @post.money %></p>
+ <p>学校名:<%= @post.schoolname %></p>
+ <p>エージェント:<%= @post.agent %></p>
+ <p>必需品:<%= @post.necessity %></p>
+</div>
+<% if @current_user && @post.user_id == @current_user.id %>
+  <div class="can-manipulate>
+    <div class="post-edit">
+    <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+    </div>
+    <div class="post-delete">
+      <%= link_to("削除", "/posts/#{@post.id}/destroy", {method:"post"}) %>
+    </div>
+  </div>
+<% end %>
