@@ -1,0 +1,48 @@
+<!-- 投稿新規作成ページ -->
+<div class="main posts-new">
+  <div class="container">
+    <%= form_tag("/posts/create") do %>
+    <div class="form-content">
+      <ul class="form-body">
+        <li class="county form">
+          <label>国:</label>
+          <select name="country">
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+          </select>
+        </li>
+        <li class="city form">
+          <label>地域:</label>
+          <input name="city">
+        </li>
+        <li class="howlong form">
+          <label>期間:</label>
+          <input name="howlong">
+        </li>
+        <li class="visa form">
+          <label>ビザの種類:</label>
+          <input name="visa">
+        </li>
+        <li class="money form">
+          <label>費用:</label>
+          <input name="money">
+        </li>
+        <li class="school form">
+          <label>学校名:</label>
+          <input name="schoolname">
+        </li>
+        <li class="agent form">
+          <label>エージェント:</label>
+          <input name="agent">
+        </li>
+        <li class="necessity form">
+          <label>必需品:</label>
+          <input name="necessity">
+        </li>
+        <input type="submit" value="Share" class="button">
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</div>

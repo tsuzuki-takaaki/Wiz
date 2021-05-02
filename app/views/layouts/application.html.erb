@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>Wiz</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,60 @@
   </head>
 
   <body>
+    <header>
+      <hr>
+      <div class="header-logo">
+        <ul class="header-menus">
+          <li class="header-title">Wiz</li>
+          <li>
+          <%= link_to("USA", "/home/usa") %>
+          </li>
+          <li>
+          <%= link_to("UK", "/home/uk") %>
+          </li>
+          <li>
+          <%= link_to("Canada", "/home/canada") %>
+          </li>
+          <li>
+          <%= link_to("Australia", "/home/australia") %>
+          </li>
+          <li>
+          <%= link_to("NewZealand", "/home/newzealnad") %>
+          </li>
+          <li>
+          <%= link_to("SouthAfrica", "/home/southafrica") %>
+          </li>
+          <li>
+          <%= link_to("Malta", "/home/malta") %>
+          </li>
+          <li>
+          <%= link_to("thePhilippines", "/home/philippines") %>
+          </li>
+          <% if @current_user %>
+            <li>
+              <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            </li>
+            <li>
+              <%= link_to("logout", "/logout", {method: "post"}) %>
+            </li>
+          <% end %>
+          <% if !@current_user %>
+            <li>
+              <%= link_to("login", "/login") %> 
+            <li>
+              <%= link_to("Signup", "/signup") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </header>
+ 
+    <% if flash[:notice] %>
+      <div class="flash">
+      <%= flash[:notice] %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

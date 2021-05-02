@@ -1,0 +1,97 @@
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// application html
+// header
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.header-logo {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+hr {
+  border:solid 2px white;
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 90%;
+  margin-top: 50px;
+}
+
+.header-menus li {
+  float: left;
+  margin-right: 30px;
+}
+
+.header-menus a {
+  color: white;
+}
+
+//top
+
+.top-main {
+  padding: 200px 0 100px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  color: white;
+  background-color: #3ecdc6;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url(/canada1.jpeg);
+}
+
+.top-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 500px;
+}
+
+.card {
+  background-color: white;
+  border: solid 1px black;
+  text-align: center;
+  flex: auto;
+  width: 30%;
+  height: 400px;
+  margin: 15px;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.card a {
+  color: black;
+}
+
+//flash
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: red;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  z-index: 10;
+  width: 10%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}

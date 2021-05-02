@@ -1,0 +1,25 @@
+<!-- アカウント作成した個人のページ(本人しか見れないように) -->
+<!-- 投稿するか国ごとのページに飛ぶか -->
+
+<!-- profile -->
+<div class="profile-show">
+  <%= @user.name %>
+</div>
+
+<!-- userの投稿 -->
+<% @posts.each do |post| %>
+  <div class="users-post">
+    <div class="uses-post-img">
+    </div>
+    <div class="users-post-content">
+      <p>国:<%= post.country %></p>
+      <p>期間:<%= post.howlong %></p>
+      <p>ビザ:<%= post.visa %></p>
+      <p>学校:<%= post.schoolname %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="toward-post">
+  <%= link_to("Post", "/posts/new") %>
+</div>
