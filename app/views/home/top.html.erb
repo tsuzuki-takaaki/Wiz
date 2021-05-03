@@ -2,22 +2,42 @@
 <div class="top-main">
   <h2>Lets share your story</h2>
 </div>
-<div class="top-content">
-  <% @posts.each do |post| %>
-   <div class="card">
-    <%= link_to("/posts/#{post.id}") do %>
-     <% user = User.find_by(id: post.user_id) %>
-     <div class="card-username">
-      <p><%= user.name %></p>
-     </div>
-     <div class="card-profile">
-      <p>国:<%= post.country %></p>
-      <p>期間:<%= post.howlong %></p>
-      <p>ビザ:<%= post.visa %></p>
-      <p>学校名:<%= post.schoolname %></p>
-     </div>
-    <% end %>
-   </div>
+
+<div class="top-middle">
+<% @posts.each do |post| %>
+  <%= link_to("/posts/#{post.id}") do %>
+  <div class="k-content">
+    <% user = User.find_by(id: post.id) %>
+    <div class="k-head">
+      <div class="k-name">
+        <h3><%= user.name %></h3>
+      </div>
+    </div> 
+
+    <div class="k-middle">
+      <ul>
+        <li>国:<%= post.country %></li>
+        <li>地域:<%= post.city %></li>
+        <li>期間:<%= post.howlong %></li>
+        <li>費用:<%= post.money %></li>
+      </ul>
+    </div>
   <% end %>
 
+    <div class="k-foot">
+      <div class="k-data">
+        <ul>
+          <li>
+          231
+          <span>Good</span>
+          </li>
+          <li>
+          0
+          <span>Followers</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
 </div>
