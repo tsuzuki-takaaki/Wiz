@@ -47,38 +47,14 @@ hr {
   position: absolute;
   top: 0;
   width: 100%;
-  height: auto;
-  min-height: 100%;
+  height: 300px;
+  //min-height: 100%;
   color: white;
-  background-color: #3ecdc6;
+  background-color: #000077;
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
-  background-image: url(/canada1.jpeg);
-}
-
-.top-content {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  position: absolute;
-  top: 500px;
-}
-
-.card {
-  background-color: white;
-  border: solid 1px black;
-  text-align: center;
-  flex: auto;
-  width: 30%;
-  height: 400px;
-  margin: 15px;
-  z-index: 10;
-  border-radius: 4px;
-}
-
-.card a {
-  color: black;
+  //background-image: url(/canada1.jpeg);
 }
 
 //flash
@@ -94,4 +70,77 @@ hr {
   width: 10%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
+}
+
+.top-middle {
+  position: absolute;
+  top: 600px;
+}
+
+.top-middle a {
+  color: black;
+}
+
+.k-content {
+  border: 1px solid black;
+  width: 300px;
+  border-radius: 7px;
+  margin: 30px 30px 0 30px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  float: left;
+}
+
+.k-head {
+  height: 150px;
+  position: relative;
+  background-image: url(/usa1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px 5px 0 5px;
+}
+
+.k-name {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 10px;
+}
+
+.k-middle {
+  height: 65px;
+}
+
+.k-middle li {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.k-foot {
+  height: 47px;
+  background-color:  #ecf0f1;
+}
+
+.k-data {
+  color: black;
+}
+
+.k-data li {
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+  font-family: 'Lato';
+  border-right: solid 1px #81878b;
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.k-data li span {
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Quicksand';
+  font-weight: 700;
+}
+
+.k-data li:last-child {
+  border-right: none;
 }
