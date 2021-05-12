@@ -17,14 +17,14 @@
 <% if @current_user && @post.user_id == @current_user.id %>
   <div class="can-manipulate>
     <div class="post-edit">
-    <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+    <%= link_to("編集", edit_post_path) %>
     </div>
     <div class="post-delete">
-      <%= link_to("削除", "/posts/#{@post.id}/destroy", {method:"post"}) %>
+      <%= link_to("削除", post_path, {method:"delete"}) %>
     </div>
   </div>
 <% end %>
 
-<div class="like-unlike>
-  <%= render partial: 'likes/like', locals: {post: @post, current_user: @current_user, likes_count: @likes_count} %>
+<div id="likes-button">
+  <%= render partial: 'likes/like', locals: {post: @post, current_user: @current_user, likes_count: @likes_count, like: @like} %>
 </div>

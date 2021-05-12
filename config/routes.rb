@@ -1,8 +1,5 @@
 Rails.application.routes.draw do  
 
-  post "likes/:post_id/create" => "likes#create"
-  post "likes/:post_id/destroy" => "likes#destroy"
-
   get "login" => "users#login_form"
   post "login" => "users#login"
   post "logout" => "users#logout"
@@ -11,13 +8,10 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show"
   get "signup" => "users#new"
 
-  post "posts/create" => "posts#create"
-  get "posts/new" => "posts#new"
-  get "posts/:id" => "posts#show"
-  get "posts/:id/edit" => "posts#edit"
-  post "posts/:id/update" => "posts#update"
-  post "posts/:id/destroy" => "posts#destroy"
-
+  resources :posts do
+    resources :likes, only: [:create, :destroy]
+  end
+  
   get "/" => "home#top"
   get "home/usa" => "home#usa"
   get "home/uk" => "home#uk"

@@ -1,1 +1,3 @@
-alert('destroyアクション');
+$(function(){
+  $("#likes-button").html("<%= escape_javascript(render partial: 'likes/like', locals: {post: @post, current_user: @current_user, likes_count: @likes_count, like: @like}) %>");
+});
