@@ -1,10 +1,12 @@
-<% if current_user && Like.find_by(user_id: current_user.id, post_id: post.id) %>
-  <%= link_to("/likes/#{post.id}/destroy", {method: "post"}, remote: true) do %>
+<% if Like.find_by(user_id: current_user.id, post_id: post.id) %>
+  <%= link_to(post_like_path(post.id, like.id), remote: true, method: :delete) do %>
     <i class="fas fa-thumbs-up unlike-btn"></i>
   <% end %>
 <% else %>
-  <%= link_to("/likes/#{post.id}/create", {method: "post"}, remote: true) do %>
+  <%= link_to(post_likes_path(post.id), remote: true, method: :post) do %>
     <i class="fas fa-thumbs-up like-btn"></i>
   <% end %>
 <% end %>
-<%= likes_count %>
+<div class="like-count">
+  <%= likes_count %>
+</div>
