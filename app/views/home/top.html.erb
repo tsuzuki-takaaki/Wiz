@@ -7,7 +7,7 @@
 <% @posts.each do |post| %>
   <%= link_to("/posts/#{post.id}") do %>
   <div class="k-content">
-    <% user = User.find_by(id: post.id) %>
+    <% user = User.find_by(id: post.user_id) %>
     <div class="k-head">
       <div class="k-name">
         <h3><%= user.name %></h3>

@@ -1,0 +1,24 @@
+<%= comments.count %>件コメント
+<h6 class="more" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">もっと見る....</h6>
+<% comments.each do |comment| %>
+  <% unless comment.id.nil? %>
+    <li class="comment-container">
+        <div class="comment-box">
+            <div class="comment-text">
+                <p><%= link_to "@#{comment.user.name}", "/users/#{comment.user_id}" %></p>
+                <div class="comment-entry">
+                    <%= comment.content %>
+                    <% if comment.user == current_user %>
+                        <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+                            <i class="fas fa-trash" style="color: black;"></i>
+                        <% end %>
+                    <% end %>
+                </div>
+                <span class="comment-date pull-right">
+                      <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+                </span>
+            </div>
+        </div>
+    </li>
+  <% end %>
+<% end %>

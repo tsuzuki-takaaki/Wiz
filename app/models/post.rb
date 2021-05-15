@@ -1,5 +1,9 @@
 class Post < ApplicationRecord
 
+  belongs_to :user
+  has_many :likes
+  has_many :comments, dependent: :destroy
+
   validates :country, {presence:true}
   validates :howlong, {presence:true}
   validates :visa, {presence:true}
