@@ -4,21 +4,12 @@ class PostsController < ApplicationController
   before_action :ensure_correct_user, {only:[:edit, :update, :destroy]}
 
   def new
+    @post = Post.new
   end
 
   def create
-    @post = Post.new(
-      country: params[:country],
-      howlong: params[:howlong],
-      visa: params[:visa],
-      schoolname: params[:schoolname],
-      user_id: @current_user.id,
-      city: params[:city],
-      money: params[:money],
-      agent: params[:agent],
-      necessity: params[:necessity])
-    @post.save
-    redirect_to("/posts/#{@post.id}")
+    @post = Post.create(post_params)
+    redirect_to(post_path(@post.id))
   end
   
   def show
@@ -57,5 +48,10 @@ class PostsController < ApplicationController
       redirect_to("/")
     end
   end
+
+  private
+   def post_params
+    params.require(:post).permit(:country, :howlong, :visa, :schoolname, :city, :money, :agent, :necessity).merge(user_id: @current_user.id)
+   end
 
 end
