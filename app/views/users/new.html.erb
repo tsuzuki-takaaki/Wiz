@@ -13,14 +13,14 @@
         </div>
       <% end %>
       
-       <%= form_tag("/users/create") do %>
-        <p>ユーザー名</p>
-        <input name="name" value="<%= @user.name %>">
-        <p>メールアドレス</p>
-        <input name="email" value="<%= @user.email %>">
-        <p>パスワード</p>
-        <input type="password" value="<%= @user.password %>" name="password">
-        <input type="submit" value="新規登録">
+       <%= form_with model: @user do |f| %>
+        <%= f.label :name, "username" %>
+        <%= f.text_field :name, value: @user.name %>
+        <%= f.label :email, "email" %>
+        <%= f.text_field :email, value: @user.email  %>
+        <%= f.label :password, "password" %>
+        <%= f.password_field :password %>
+        <%= f.submit "新規登録" %>
        <% end %>
       </div>
     </div>

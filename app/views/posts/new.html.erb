@@ -1,46 +1,42 @@
 <!-- 投稿新規作成ページ -->
 <div class="main posts-new">
   <div class="container">
-    <%= form_tag(posts_path) do %>
+    <%= form_with model: @post do |f| %>
     <div class="form-content">
       <ul class="form-body">
         <li class="county form">
-          <label>国:</label>
-          <select name="country">
-            <option value="USA">USA</option>
-            <option value="UK">UK</option>
-            <option value="Canada">Canada</option>
-          </select>
+          <%= f.label :country, "国" %>
+          <%= f.select :country, [["USA", "USA"], ["UK", "UK"], ["Canada", "Canada"]] %>
         </li>
         <li class="city form">
-          <label>地域:</label>
-          <input name="city">
+          <%= f.label :city, "地域" %>
+          <%= f.text_field :city %>
         </li>
         <li class="howlong form">
-          <label>期間:</label>
-          <input name="howlong">
+          <%= f.label :howlong, "期間" %>
+          <%= f.text_field :howlong %>
         </li>
         <li class="visa form">
-          <label>ビザの種類:</label>
-          <input name="visa">
+          <%= f.label :visa, "ビザの種類" %>
+          <%= f.text_field :visa %>
         </li>
         <li class="money form">
-          <label>費用:</label>
-          <input name="money">
+          <%= f.label :money, "費用"%>
+          <%= f.text_field :money %>
         </li>
         <li class="school form">
-          <label>学校名:</label>
-          <input name="schoolname">
+          <%= f.label :schoolname, "学校名" %>
+          <%= f.text_field :schoolname %>
         </li>
         <li class="agent form">
-          <label>エージェント:</label>
-          <input name="agent">
+          <%= f.label :agent, "エージェント" %>
+          <%= f.text_field :agent %>
         </li>
         <li class="necessity form">
-          <label>必需品:</label>
-          <input name="necessity">
+          <%= f.label :necessity, "必需品"%>
+          <%= f.text_field :necessity %>
         </li>
-        <input type="submit" value="Share" class="button">
+        <%= f.submit "Share" %>
       </ul>
     </div>
     <% end %>

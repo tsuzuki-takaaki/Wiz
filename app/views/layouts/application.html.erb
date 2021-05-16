@@ -18,32 +18,32 @@
       <div class="header-logo">
         <ul class="header-menus">
           <li>
-          <%= link_to("USA", "/home/usa") %>
+          <%= link_to("USA", home_usa_path) %>
           </li>
           <li>
-          <%= link_to("UK", "/home/uk") %>
+          <%= link_to("UK", home_uk_path) %>
           </li>
           <li>
-          <%= link_to("Canada", "/home/canada") %>
+          <%= link_to("Canada", home_canada_path) %>
           </li>
           <li>
-          <%= link_to("Australia", "/home/australia") %>
+          <%= link_to("Australia", home_australia_path) %>
           </li>
           <li>
-          <%= link_to("NewZealand", "/home/newzealnad") %>
+          <%= link_to("NewZealand", home_newzealand_path) %>
           </li>
           <li>
-          <%= link_to("SouthAfrica", "/home/southafrica") %>
+          <%= link_to("SouthAfrica", home_southafrica_path) %>
           </li>
           <li>
-          <%= link_to("Malta", "/home/malta") %>
+          <%= link_to("Malta", home_malta_path) %>
           </li>
           <li>
-          <%= link_to("thePhilippines", "/home/philippines") %>
+          <%= link_to("thePhilippines", home_philippines_path) %>
           </li>
           <% if @current_user %>
             <li>
-              <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+              <%= link_to(@current_user.name, user_path(@current_user.id)) %>
             </li>
             <li>
               <%= link_to("logout", "/logout", {method: "post"}) %>
@@ -53,7 +53,7 @@
             <li>
               <%= link_to("login", "/login") %> 
             <li>
-              <%= link_to("Signup", "/signup") %>
+              <%= link_to("Signup", new_user_path) %>
             </li>
           <% end %>
         </ul>

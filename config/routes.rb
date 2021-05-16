@@ -4,16 +4,14 @@ Rails.application.routes.draw do
   post "login" => "users#login"
   post "logout" => "users#logout"
 
-  post "users/create" => "users#create"
-  get "users/:id" => "users#show"
-  get "signup" => "users#new"
+  resources :users, only: [:show, :new, :create]
 
-  resources :posts do
+  resources :posts, only: [:create, :new, :edit, :show, :update, :destroy] do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
   end
   
-  get "/" => "home#top"
+  root "home#top"
   get "home/usa" => "home#usa"
   get "home/uk" => "home#uk"
   get "home/canada" => "home#canada"
@@ -21,6 +19,6 @@ Rails.application.routes.draw do
   get "home/newzealand" => "home#newzealand"
   get "home/southafrica" => "home#southafrica"
   get "home/malta" => "home#malta"
-  get "home/philippines"
+  get "home/philippines" => "home#philippines"
   
 end
