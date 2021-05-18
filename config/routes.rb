@@ -1,10 +1,12 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do 
 
-  get "login" => "users#login_form"
-  post "login" => "users#login"
-  post "logout" => "users#logout"
-
-  resources :users, only: [:show, :new, :create]
+  resources :users, only: [:show, :new, :create] do
+    collection do
+      get "login_form"
+      post "login"
+      post "logout"
+    end
+  end
 
   resources :posts, only: [:create, :new, :edit, :show, :update, :destroy] do
     resources :likes, only: [:create, :destroy]
