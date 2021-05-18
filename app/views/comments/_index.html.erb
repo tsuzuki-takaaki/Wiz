@@ -5,7 +5,7 @@
     <li class="comment-container">
         <div class="comment-box">
             <div class="comment-text">
-                <p><%= link_to "@#{comment.user.name}", "/users/#{comment.user_id}" %></p>
+                <p><%= link_to "@#{comment.user.name}", user_path(comment.user_id) %></p>
                 <div class="comment-entry">
                     <%= comment.content %>
                     <% if comment.user == current_user %>

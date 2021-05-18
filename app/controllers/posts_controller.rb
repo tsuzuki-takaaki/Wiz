@@ -27,29 +27,26 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
-    @post.country = params[:country]
-    @post.howlong = params[:howlong]
-    @post.visa = params[:visa]
-    @post.schoolname = params[:schoolname]
-    @post.save
-    redirect_to("/")
+    @post = @post.update(post_params)
+    redirect_to(root_path)
   end
 
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
-    redirect_to("/")
+    redirect_to(root_path)
   end
 
   def ensure_correct_user
     @post = Post.find_by(id: params[:id])
     if @post.user_id != @current_user.id
       flash[:notice] ="権限がありません"
-      redirect_to("/")
+      redirect_to(root_path)
     end
   end
 
   private
+
    def post_params
     params.require(:post).permit(:country, :howlong, :visa, :schoolname, :city, :money, :agent, :necessity).merge(user_id: @current_user.id)
    end

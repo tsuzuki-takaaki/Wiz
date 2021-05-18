@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       flash[:notice] = "登録が完了しました"
       redirect_to(user_path(@user.id))
     else
-      render("users/new")
+      render(new_user_path)
     end
   end
 
@@ -31,19 +31,19 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
-      redirect_to("/users/#{@user.id}")
+      redirect_to(user_path(@user.id))
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
       @email = params[:email]
       @password = params[:password]
-      render("users/login_form")
+      render(login_form_users_path)
     end
   end
 
   def logout
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
-    redirect_to("/")
+    redirect_to(root_path)
   end
 
   private
