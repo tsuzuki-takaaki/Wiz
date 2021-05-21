@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments, dependent: :destroy
 
+  mount_uploader :image_name1, ImageName1Uploader
+
   validates :country, {presence:true}
   validates :howlong, {presence:true}
   validates :visa, {presence:true}
