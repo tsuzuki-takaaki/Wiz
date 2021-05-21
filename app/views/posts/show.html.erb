@@ -4,15 +4,15 @@
 </div>
 
 <div class="post-content">
- <img src=<%= "/#{@post.image_name1}" %> class="photopost">
- <p>国:<%= @post.country %></p>
- <p>地域:<%= @post.city %></p>
- <p>期間:<%= @post.howlong %></p>
- <p>ビザ:<%= @post.visa %></p>
- <p>費用:<%= @post.money %></p>
- <p>学校名:<%= @post.schoolname %></p>
- <p>エージェント:<%= @post.agent %></p>
- <p>必需品:<%= @post.necessity %></p>
+  <%= image_tag @post.image_name1.url if @post.image_name1? %>
+  <p>国:<%= @post.country %></p>
+  <p>地域:<%= @post.city %></p>
+  <p>期間:<%= @post.howlong %></p>
+  <p>ビザ:<%= @post.visa %></p>
+  <p>費用:<%= @post.money %></p>
+  <p>学校名:<%= @post.schoolname %></p>
+  <p>エージェント:<%= @post.agent %></p>
+  <p>必需品:<%= @post.necessity %></p>
 </div>
 <% if @current_user && @post.user_id == @current_user.id %>
   <div class="can-manipulate>
