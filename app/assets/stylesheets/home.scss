@@ -93,10 +93,13 @@ hr {
 .k-head {
   height: 150px;
   position: relative;
-  background-image: url(/usa1.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 5px 5px 0 5px;
+  border-bottom: 1px solid black;
+}
+
+.card-pic {
+  height: 140px;
+  width: 80%;
 }
 
 .k-name {
