@@ -1,12 +1,7 @@
-<!-- アカウント作成した個人のページ(本人しか見れないように) -->
-<!-- 投稿するか国ごとのページに飛ぶか -->
-
-<!-- profile -->
 <div class="profile-show">
   <%= @user.name %>
 </div>
 
-<!-- userの投稿 -->
 <% @posts.each do |post| %>
   <div class="users-post">
     <div class="uses-post-img">

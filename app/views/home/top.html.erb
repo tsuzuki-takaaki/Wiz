@@ -1,8 +1,34 @@
-<!-- 全体のトップページ -->
 <div class="top-main">
   <h2>Lets share your story</h2>
 </div>
-
+<div class="selection">
+  <ul class="select-menus">
+    <li>
+      <%= link_to("USA", home_usa_path) %>
+    </li>
+    <li>
+      <%= link_to("UK", home_uk_path) %>
+    </li>
+    <li>
+      <%= link_to("Canada", home_canada_path) %>
+    </li>
+    <li>
+      <%= link_to("Australia", home_australia_path) %>
+    </li>
+    <li>
+      <%= link_to("NewZealand", home_newzealand_path) %>
+    </li>
+    <li>
+      <%= link_to("SouthAfrica", home_southafrica_path) %>
+    </li>
+    <li>
+      <%= link_to("Malta", home_malta_path) %>
+    </li>
+    <li>
+      <%= link_to("thePhilippines", home_philippines_path) %>
+    </li>
+  </ul>
+</div>
 <div class="top-middle">
 <% @posts.each do |post| %>
   <%= link_to("/posts/#{post.id}") do %>
