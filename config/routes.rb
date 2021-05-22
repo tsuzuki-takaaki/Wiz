@@ -1,12 +1,8 @@
 Rails.application.routes.draw do 
 
-  resources :users, only: [:show, :new, :create] do
-    collection do
-      get "login_form"
-      post "login"
-      post "logout"
-    end
-  end
+  devise_for :users
+
+  resources :users, only: [:show]
 
   resources :posts, only: [:create, :new, :edit, :show, :update, :destroy] do
     resources :likes, only: [:create, :destroy]
