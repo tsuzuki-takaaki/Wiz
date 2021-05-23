@@ -15,28 +15,19 @@ header {
   width: 100%;
 }
 
-.header-logo {
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-hr {
-  border:solid 2px white;
-  margin-top: 10px;
-  border-radius: 15px;
-  width: 90%;
-  margin-top: 50px;
+.header-menus {
+  text-align: right;
 }
 
 .header-menus li {
-  float: left;
+  display: inline-block;
   margin-right: 30px;
 }
 
 .header-menus a {
   color: white;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 //top
@@ -47,13 +38,31 @@ hr {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 350px;
+  height: 320px;
   //min-height: 100%;
   color: white;
   background-repeat: no-repeat;
-  background-position: center 65%;
+  background-position: center 73%;
   background-image: url(/Canada3.jpg);
   background-size: cover;
+}
+
+.selection {
+  position: absolute;
+  top: 650px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.select-menus li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.select-menus a {
+  color: green;
 }
 
 //flash
@@ -74,7 +83,7 @@ hr {
 .top-middle {
   position: absolute;
   top: 600px;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .top-middle a {

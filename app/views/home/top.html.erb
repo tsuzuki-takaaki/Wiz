@@ -1,43 +1,34 @@
-<!-- 全体のトップページ -->
 <div class="top-main">
   <h2>Lets share your story</h2>
 </div>
-
-<div class="top-middle">
-<% @posts.each do |post| %>
-  <%= link_to("/posts/#{post.id}") do %>
-  <div class="k-content">
-    <div class="k-head">
-      <%= image_tag '/usa1.jpeg', class: 'card-pic' %>
-      <div class="k-name">
-        <h3><%= post.user.name %></h3>
-      </div>
-    </div> 
-
-    <div class="k-middle">
-      <ul>
-        <li>国:<%= post.country %></li>
-        <li>地域:<%= post.city %></li>
-        <li>期間:<%= post.howlong %></li>
-        <li>費用:<%= post.money %></li>
-      </ul>
-    </div>
-  <% end %>
-
-    <div class="k-foot">
-      <div class="k-data">
-        <ul>
-          <li>
-          231
-          <span>Good</span>
-          </li>
-          <li>
-          0
-          <span>Followers</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-<% end %>
+<div class="selection">
+  <ul class="select-menus">
+    <li>
+      <%= link_to("USA", home_usa_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("UK", home_uk_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("Canada", home_canada_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("Australia", home_australia_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("NewZealand", home_newzealand_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("SouthAfrica", home_southafrica_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("Malta", home_malta_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("thePhilippines", home_philippines_path, remote: true) %>
+    </li>
+  </ul>
+</div>
+<div class="card-field">
+  <%= render partial: 'home/top', locals: {posts:@posts} %>
 </div>

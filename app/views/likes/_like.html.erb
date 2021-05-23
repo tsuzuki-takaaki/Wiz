@@ -1,4 +1,4 @@
-<% if Like.find_by(user_id: current_user.id, post_id: post.id) %>
+<% if user_signed_in? && Like.find_by(user_id: current_user.id, post_id: post.id) %>
   <%= link_to(post_like_path(post.id, like.id), remote: true, method: :delete) do %>
     <i class="fas fa-thumbs-up unlike-btn"></i>
   <% end %>
