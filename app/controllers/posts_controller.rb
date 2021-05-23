@@ -15,7 +15,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @user = @post.user
-    @like = Like.find_by(user_id: current_user.id, post_id: @post.id)
+    if user_signed_in?
+      @like = Like.find_by(user_id: current_user.id, post_id: @post.id)
+    end
     @likes_count = Like.where(post_id: @post.id).count
     @comment = Comment.new
     @comments = @post.comments.order(created_at: :desc)

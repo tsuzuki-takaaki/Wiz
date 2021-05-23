@@ -1,0 +1,38 @@
+<div class="top-middle">
+<% @posts.each do |post| %>
+  <%= link_to(post_path(post.id)) do %>
+  <div class="k-content">
+    <div class="k-head">
+      <%= image_tag '/usa1.jpeg', class: 'card-pic' %>
+      <div class="k-name">
+        <h3><%= post.user.name %></h3>
+      </div>
+    </div> 
+
+    <div class="k-middle">
+      <ul>
+        <li>国:<%= post.country %></li>
+        <li>地域:<%= post.city %></li>
+        <li>期間:<%= post.howlong %></li>
+        <li>費用:<%= post.money %></li>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="k-foot">
+      <div class="k-data">
+        <ul>
+          <li>
+          231
+          <span>Good</span>
+          </li>
+          <li>
+          0
+          <span>Followers</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
