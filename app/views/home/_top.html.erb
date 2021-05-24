@@ -3,7 +3,7 @@
   <%= link_to(post_path(post.id)) do %>
   <div class="k-content">
     <div class="k-head">
-      <%= image_tag '/usa1.jpeg', class: 'card-pic' %>
+      <%= image_tag post.image_name1.url if post.image_name1? %>
       <div class="k-name">
         <h3><%= post.user.name %></h3>
       </div>

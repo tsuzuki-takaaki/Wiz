@@ -1,8 +1,18 @@
-.photopost {
-  height: 250px;
-  width: 250px;
+//show
+.post-content img {
+  height: 300px;
+  width: 485px;
 }
 
+.like-btn {
+  color: #8899a6;
+}
+
+.unlike-btn {
+  color: #ff2581;
+}
+
+//new
 .form-content {
   position: absolute;
   left: 35%;
@@ -13,7 +23,7 @@
   padding-top: 40px;
 }
 
-.button {
+.submit {
   display       : inline-block;
   border-radius : 6%;
   font-size     : 17pt;
@@ -28,16 +38,9 @@
   border        : 2px solid #000066;
   margin-top: 20px;
 }
-.button:hover {
+
+.submit:hover {
   box-shadow    : none;
   color         : #000066;
   background    : #ffffff;
-}
-
-.like-btn {
-  color: #8899a6;
-}
-
-.unlike-btn {
-  color: #ff2581;
 }
