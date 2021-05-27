@@ -12,17 +12,18 @@
   <p>学校名:<%= @post.schoolname %></p>
   <p>エージェント:<%= @post.agent %></p>
   <p>必需品:<%= @post.necessity %></p>
-</div>
-<% if current_user && @post.user_id == current_user.id %>
-  <div class="can-manipulate>
-    <div class="post-edit">
-    <%= link_to("編集", edit_post_path) %>
+  <% if current_user && @post.user_id == current_user.id %>
+    <div class="can-manipulate">
+      <div class="post-edit">
+      <%= link_to("編集", edit_post_path) %>
+      </div>
+      <div class="post-delete">
+        <%= link_to("削除", post_path, {method:"delete"}) %>
+      </div>
     </div>
-    <div class="post-delete">
-      <%= link_to("削除", post_path, {method:"delete"}) %>
-    </div>
-  </div>
 <% end %>
+
+</div>
 
 <div class="likes-button">
   <%= render partial: 'likes/like', locals: {post: @post, likes_count: @likes_count, like: @like} %>
@@ -31,15 +32,13 @@
 <div class="row">
   <ul>
     <li class="comment-create">
-      <h3 class="text-left title">Comments</h3>
+      <h3 class="text-left title">Questions</h3>
     </li>
-    <% if @current_user %>
+    <li id="comments_area">
+      <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
+    </li>
     <li class="comment-create">
       <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-    </li>
-    <% end %>
-    <li id="comments_area">
-      <%= render partial: 'comments/index', locals: { comments: @comments } %>
     </li>
   </ul>
 </div>
