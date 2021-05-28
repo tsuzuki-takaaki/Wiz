@@ -1,7 +1,7 @@
 <p><%= comments.count %>件コメント</p>
 <% comments.each do |comment| %>
-  <% unless comment.id.nil? %>
-    <div class="comment-box">
+    <% unless comment.user_id == user.id %>
+    <div class="comment-box-right">
         <div class="comment-user">
             <p>from<%= link_to "@#{comment.user.name}", user_path(comment.user_id) %></p>
         </div>
@@ -19,5 +19,24 @@
             <p><%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
         </div>
     </div>
-  <% end %>
+    <% else %>
+    <div class="comment-box-left">
+        <div class="comment-user">
+            <p>from<%= link_to "@#{comment.user.name}", user_path(comment.user_id) %></p>
+        </div>
+        <div class="comment-content">
+            <p><%= comment.content %></p>
+        </div>
+        <div class="comment-delete">
+            <% if comment.user == current_user %>
+                <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+                    <i class="fas fa-trash" style="color: black;"></i>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="comment-time">
+            <p><%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
+        </div>
+    </div>
+    <% end %>
 <% end %>

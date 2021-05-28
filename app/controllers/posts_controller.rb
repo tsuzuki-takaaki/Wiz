@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     end
     @likes_count = Like.where(post_id: @post.id).count
     @comment = Comment.new
-    @comments = @post.comments.order(created_at: :desc)
+    @comments = @post.comments.order(created_at: :asc)
   end
 
   def edit

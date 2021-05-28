@@ -17,6 +17,7 @@
   width: 485px;
 }
 
+//good-button
 .likes-button {
   position: absolute;
   top: 370px;
@@ -31,6 +32,7 @@
   color: #ff2581;
 }
 
+//commentbox
 .row {
   position: absolute;
   top: 60px;
@@ -43,7 +45,7 @@
   overflow: scroll;
 }
 
-.comment-box {
+.comment-box-right {
   height: 70px;
   position: relative;
   left: 25%;
@@ -57,7 +59,7 @@
   border-radius: 10px;
 }
 
-.comment-box:before {
+.comment-box-right::before {
   content: "";
   position: absolute;
   top: 60%;
@@ -67,10 +69,40 @@
   border-left: 15px solid #FF9872;
 }
 
-.comment-box p {
+.comment-box-right p {
   margin: 0;
   padding: 0;
 }
+
+.comment-box-left {
+  height: 70px;
+  position: relative;
+  left: -40px;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 50%;
+  color: #555;
+  background: #FF9872;
+  border-radius: 10px;
+}
+
+.comment-box-left::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -28px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #FF9872; 
+}
+
+.comment-box-left p {
+  margin: 0;
+  padding: 0;
+}
+
 
 .comment-user {
   position: absolute;
