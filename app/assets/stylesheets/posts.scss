@@ -1,7 +1,27 @@
 //show
+.post-user-name {
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.post-content {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  max-width: 60%;
+}
+
 .post-content img {
   height: 300px;
   width: 485px;
+}
+
+//good-button
+.likes-button {
+  position: absolute;
+  top: 370px;
+  left: 48%;
 }
 
 .like-btn {
@@ -10,6 +30,94 @@
 
 .unlike-btn {
   color: #ff2581;
+}
+
+//commentbox
+.comment-field {
+  position: absolute;
+  left: 55%;
+  width: 38%;
+  height: 90%;
+}
+
+#comment-area {
+  margin: 0 auto;
+  height: 92%;
+  border: black 1px solid;
+  border-radius: 25px;
+  overflow: scroll;
+}
+
+.half-right {
+  text-align: right;
+  width: 93%;
+}
+
+.comment-box-right {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  left: 0;
+  width: 35%;
+  border-radius: 10px;
+  color: #555;
+  background: #FF9872;
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+.comment-box-right::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #FF9872;
+}
+
+.half-left {
+  text-align: left;
+  width: 93%;
+}
+
+.comment-box-left {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  height: auto;
+  width: 35%;
+  border-radius: 10px;
+  color: #555;
+  background: #FF9872;
+  margin-top: 15px;
+  font-size: 10px;
+}
+
+.comment-box-left::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -20%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid  #FF9872;
+}
+
+.comment-username {
+  text-align: right;
+  font-weight: bold;
+  margin-top: -13px;
+}
+
+.comment-content {
+  font-size: 13px;
+  margin: 25px 0 25px 0;
+}
+
+.comment-time {
+  text-align: right;
+  margin-bottom: -13px;
 }
 
 //new
@@ -23,7 +131,7 @@
   padding-top: 40px;
 }
 
-.submit {
+.submit-form {
   display       : inline-block;
   border-radius : 6%;
   font-size     : 17pt;
@@ -39,7 +147,7 @@
   margin-top: 20px;
 }
 
-.submit:hover {
+.submit-form:hover {
   box-shadow    : none;
   color         : #000066;
   background    : #ffffff;
