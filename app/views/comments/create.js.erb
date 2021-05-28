@@ -1,4 +1,4 @@
 $(function(){
   $("textarea").val('')
-  $("#comments_area").html("<%= escape_javascript(render partial: 'comments/index', locals: { comments: @comments, user: @user}) %>")
+  $("#comment-area").html("<%= escape_javascript(render partial: 'comments/index', locals: { comments: @comments, user: @user}) %>")
 });

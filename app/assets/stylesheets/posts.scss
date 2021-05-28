@@ -33,30 +33,37 @@
 }
 
 //commentbox
-.row {
+.comment-field {
   position: absolute;
-  top: 60px;
   left: 55%;
-  width: 358px;
+  width: 38%;
   height: 90%;
-  max-width: 40%;
+}
+
+#comment-area {
+  margin: 0 auto;
+  height: 92%;
   border: black 1px solid;
   border-radius: 25px;
   overflow: scroll;
 }
 
+.half-right {
+  text-align: right;
+  width: 93%;
+}
+
 .comment-box-right {
-  height: 70px;
-  position: relative;
-  left: 25%;
   display: inline-block;
-  margin: 1.5em 15px 1.5em 0;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 50%;
+  position: relative;
+  height: auto;
+  left: 0;
+  width: 35%;
+  border-radius: 10px;
   color: #555;
   background: #FF9872;
-  border-radius: 10px;
+  margin-top: 50px;
+  font-size: 10px;
 }
 
 .comment-box-right::before {
@@ -69,66 +76,48 @@
   border-left: 15px solid #FF9872;
 }
 
-.comment-box-right p {
-  margin: 0;
-  padding: 0;
+.half-left {
+  text-align: left;
+  width: 93%;
 }
 
 .comment-box-left {
-  height: 70px;
-  position: relative;
-  left: -40px;
   display: inline-block;
-  margin: 1.5em 15px 1.5em 0;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 50%;
+  position: relative;
+  left: 5%;
+  height: auto;
+  width: 35%;
+  border-radius: 10px;
   color: #555;
   background: #FF9872;
-  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 10px;
 }
 
 .comment-box-left::before {
   content: "";
   position: absolute;
   top: 60%;
-  left: -28px;
+  left: -20%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid #FF9872; 
+  border-right: 15px solid  #FF9872;
 }
 
-.comment-box-left p {
-  margin: 0;
-  padding: 0;
-}
-
-
-.comment-user {
-  position: absolute;
-  top: 0;
-  left: 60%;
-  height: 5px;
-  width: 40%;
-  font-size: 10px;
+.comment-username {
+  text-align: right;
+  font-weight: bold;
+  margin-top: -13px;
 }
 
 .comment-content {
-  position: absolute;
-  top: 50%;
-  left: 28%;
-  font-size: 12px;
+  font-size: 13px;
+  margin: 25px 0 25px 0;
 }
 
 .comment-time {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-}
-
-.comment-time p{
-  font-size: 1px;
-  color: black;
+  text-align: right;
+  margin-bottom: -13px;
 }
 
 //new
