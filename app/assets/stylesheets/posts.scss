@@ -43,12 +43,16 @@
   height: 85%;
 }
 
-#comment-area {
+.comment-area {
   margin: 0 auto;
   height: 92%;
   border: black 1px solid;
   border-radius: 25px;
   overflow: scroll;
+}
+
+.comment-area::-webkit-scrollbar {
+  display:none;
 }
 
 .half-right {
