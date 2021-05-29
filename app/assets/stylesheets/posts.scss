@@ -1,7 +1,10 @@
 //show
+.post-show {
+  height: 85%;
+}
 .post-user-name {
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 40%;
 }
 
@@ -13,15 +16,15 @@
 }
 
 .post-content img {
-  height: 300px;
-  width: 485px;
+  height: 250px;
+  width: 404px;
 }
 
 //good-button
 .likes-button {
   position: absolute;
-  top: 370px;
-  left: 48%;
+  top: 320px;
+  left: 42%;
 }
 
 .like-btn {
@@ -36,8 +39,8 @@
 .comment-field {
   position: absolute;
   left: 55%;
-  width: 38%;
-  height: 90%;
+  width: 35%;
+  height: 85%;
 }
 
 #comment-area {

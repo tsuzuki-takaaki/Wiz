@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def top
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
 
   def usa
