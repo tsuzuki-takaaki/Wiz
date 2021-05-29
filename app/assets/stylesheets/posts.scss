@@ -20,21 +20,6 @@
   width: 404px;
 }
 
-//good-button
-.likes-button {
-  position: absolute;
-  top: 320px;
-  left: 42%;
-}
-
-.like-btn {
-  color: #8899a6;
-}
-
-.unlike-btn {
-  color: #ff2581;
-}
-
 //commentbox
 .comment-field {
   position: absolute;
@@ -43,7 +28,7 @@
   height: 85%;
 }
 
-#comment-area {
+.comment-area {
   margin: 0 auto;
   height: 92%;
   border: black 1px solid;
@@ -51,16 +36,24 @@
   overflow: scroll;
 }
 
+.comment-area::-webkit-scrollbar {
+  display:none;
+}
+
 .half-right {
   text-align: right;
   width: 93%;
 }
 
-.comment-box-right {
+.half-left {
+  text-align: left;
+  width: 93%;
+}
+
+.comment-box {
   display: inline-block;
   position: relative;
   height: auto;
-  left: 0;
   width: 35%;
   border-radius: 10px;
   color: #555;
@@ -69,7 +62,11 @@
   font-size: 10px;
 }
 
-.comment-box-right::before {
+.right {
+  left: 0;
+}
+
+.right::before {
   content: "";
   position: absolute;
   top: 60%;
@@ -79,25 +76,11 @@
   border-left: 15px solid #FF9872;
 }
 
-.half-left {
-  text-align: left;
-  width: 93%;
-}
-
-.comment-box-left {
-  display: inline-block;
-  position: relative;
+.left {
   left: 5%;
-  height: auto;
-  width: 35%;
-  border-radius: 10px;
-  color: #555;
-  background: #FF9872;
-  margin-top: 15px;
-  font-size: 10px;
 }
 
-.comment-box-left::before {
+.left::before {
   content: "";
   position: absolute;
   top: 60%;

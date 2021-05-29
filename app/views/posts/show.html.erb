@@ -24,12 +24,9 @@
   <% end %>
   </div>
 </div>
-<div class="likes-button">
-  <%= render partial: 'likes/like', locals: {post: @post, likes_count: @likes_count, like: @like} %>
-</div>
 <div class="comment-field">
   <h3 class="comment title">Questions</h3>
-  <div id="comment-area">
+  <div class="comment-area">
     <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
   </div>
   <div class="comment-create">
