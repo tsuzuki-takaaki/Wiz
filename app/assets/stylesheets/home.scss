@@ -1,3 +1,8 @@
+//for all
+body {
+  width: 100%;
+}
+
 ul, li {
   list-style-type: none;
 }
@@ -65,7 +70,6 @@ header {
   color: green;
 }
 
-//flash
 .flash {
   padding: 10px 0;
   color: white;
@@ -80,84 +84,67 @@ header {
   font-size: 14px;
 }
 
+//card-index
 .top-middle {
   position: absolute;
   top: 600px;
   margin-top: 150px;
-}
-
-.top-middle a {
-  color: black;
+  width: 100%;
 }
 
 .k-content {
-  border: 1px solid black;
-  width: 300px;
-  border-radius: 7px;
+  width: 18%;
   margin: 30px 30px 0 30px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   float: left;
 }
 
 .k-head {
-  height: 150px;
   position: relative;
-  margin: 5px 5px 0 5px;
-  border-bottom: 1px solid black;
+  height: 150px;
+  text-align: center;
 }
 
 .k-head img {
-  height: 145px;
-  width: 270px;
-}
-
-.card-pic {
-  height: 140px;
-  width: 80%;
+  height: 100%;
+  width: 127%;
 }
 
 .k-name {
   position: absolute;
   top: 0;
-  right: 5px;
+  right: -45px;
   font-size: 10px;
 }
 
 .k-middle {
-  height: 65px;
+  height: 90px;
+}
+
+.k-middle ul {
+  display: inline-block;
 }
 
 .k-middle li {
-  margin-top: 3px;
+  margin-bottom: 3px;
   font-size: 11px;
+  text-align: left;
 }
 
 .k-foot {
-  height: 47px;
+  height: 44px;
   background-color:  #ecf0f1;
+  position: relative;
 }
 
-.k-data {
-  color: black;
-}
-
-.k-data li {
-  width: 30%;
-  text-align: center;
-  display: inline-block;
-  font-family: 'Lato';
-  border-right: solid 1px #81878b;
-  margin-top: 12px;
-  font-size: 11px;
-}
-
-.k-data li span {
-  display: block;
-  text-transform: uppercase;
-  font-family: 'Quicksand';
-  font-weight: 700;
-}
-
-.k-data li:last-child {
-  border-right: none;
+.info-button {
+  position: absolute;
+  top: 7%;
+  left: 17%;
+  border: #4676D7 1px solid;
+  border-radius: 4px;
+  background-color: #4676D7;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: #fff;
 }

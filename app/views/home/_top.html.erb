@@ -1,37 +1,22 @@
 <div class="top-middle">
 <% posts.each do |post| %>
-  <%= link_to(post_path(post.id)) do %>
   <div class="k-content">
     <div class="k-head">
       <%= image_tag post.image_name1.url if post.image_name1? %>
       <div class="k-name">
-        <h3><%= post.user.name %></h3>
+        <h3>@<%= post.user.name %></h3>
       </div>
     </div> 
-
     <div class="k-middle">
-      <ul>
+      <ul class="personal">
         <li>国:<%= post.country %></li>
         <li>地域:<%= post.city %></li>
         <li>期間:<%= post.howlong %></li>
         <li>費用:<%= post.money %></li>
       </ul>
     </div>
-  <% end %>
-
     <div class="k-foot">
-      <div class="k-data">
-        <ul>
-          <li>
-          231
-          <span>Good</span>
-          </li>
-          <li>
-          0
-          <span>Followers</span>
-          </li>
-        </ul>
-      </div>
+      <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
     </div>
   </div>
 <% end %>
