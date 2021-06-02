@@ -1,6 +1,11 @@
 //for all
-body {
+* {
+  text-align: center;
+}
+
+html, body {
   width: 100%;
+  height: 100%;
 }
 
 ul, li {
@@ -38,7 +43,7 @@ header {
 //top
 
 .top-main {
-  padding: 200px 0 100px;
+  padding: 200px 0 100px 0;
   text-align: center;
   position: absolute;
   top: 0;

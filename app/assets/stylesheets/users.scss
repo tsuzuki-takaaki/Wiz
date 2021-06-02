@@ -1,18 +1,94 @@
-//usersコントローラー全体
-* {
-  text-align: center;
+//login
+.login-container {
+  height: 100%;
+  background-color: #FFD5EC;
 }
 
-.form-error {
-  color: red;
-}
-
-//users.new
-.toward-post {
+.login-card {
   position: absolute;
-  top: 700px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(black, 0.4);
+  height: 60%;
+  width: 30%;
+  margin: auto;
 }
 
+.box input {
+  height: 50px;
+  width: 80%;
+  font-size: 15px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+}
 
+input[type="email"], input[type="password"] {
+  height: 40px;
+  border:1px solid #D3D3D3;
+  background-color: #fff;
+}
 
-//users.show
+input[type="submit"] {
+  font-weight: bold;
+  color: #fff;
+  background-color: #00CC66;
+  cursor: pointer;
+}
+
+.forgot-password {
+  width: 70%;
+  font-size: 14px;
+  margin: 0 0 0 auto;
+  margin-top: 5px;
+}
+
+.without-account {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.without-account a {
+  color: #FFCC00;
+}
+//remember me if you need to use
+/*<% if devise_mapping.rememberable? %>
+    <div class="remember-me">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+*/
+//signup
+.signup-container {
+  height: 100%;
+  background-color: #77F9C3;
+}
+.signup-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(black, 0.4);
+  height: 70%;
+  width: 37%;
+  margin: auto;
+}
+
+.name input[type="text"] {
+  height: 40px;
+  border:1px solid #D3D3D3;
+  background-color: #fff;
+}
+
+.already-account a {
+  color:  #FFCC00;
+}

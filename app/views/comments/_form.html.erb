@@ -1,4 +1,6 @@
-<%= form_with(model: [post, comment], local: false ) do |f| %>
-  <%= f.text_area :content, class: "input-mysize" %>
-  <%= f.submit "送信", class: "btn btn-outline-dark comment-submit float-right" %>
-<% end %>
+<div class="comment-form">
+  <%= form_with(model: [post, comment], local: false ) do |f| %>
+    <%= f.text_area :content, class: "input-mysize" %>
+    <%= f.submit "Send", class: "send-btn" %>
+  <% end %>
+</div>
