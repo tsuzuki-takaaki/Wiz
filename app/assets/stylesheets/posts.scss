@@ -1,7 +1,4 @@
 //show
-.post-show {
-  height: 85%;
-}
 .post-user-name {
   position: absolute;
   top: 5%;
@@ -31,9 +28,10 @@
 .comment-area {
   margin: 0 auto;
   height: 92%;
-  border: black 1px solid;
-  border-radius: 25px;
   overflow: scroll;
+  border-radius: 2px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  background-color: #FF9872;
 }
 
 .comment-area::-webkit-scrollbar {
@@ -57,7 +55,7 @@
   width: 35%;
   border-radius: 10px;
   color: #555;
-  background: #FF9872;
+  background: #fff;
   margin-top: 50px;
   font-size: 10px;
 }
@@ -73,7 +71,7 @@
   left: 100%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #FF9872;
+  border-left: 15px solid #fff;
 }
 
 .left {
@@ -87,7 +85,7 @@
   left: -20%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid  #FF9872;
+  border-right: 15px solid  #fff;
 }
 
 .comment-username {
@@ -104,6 +102,35 @@
 .comment-time {
   text-align: right;
   margin-bottom: -13px;
+}
+
+.comment-form {
+  margin-top: 3px;
+}
+
+.input-mysize {
+  height: 35px;
+  width: 55%;
+  display: inline-block;
+  font-size: 100%;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+	border-right: none;
+}
+
+.send-btn {
+  height: 35px;
+  display: inline-block;
+  font-size: 100%;
+  padding: 8px 20px;
+  margin-left: -6px;
+  color: #fff;
+  background-color: #000077;
+  vertical-align: top;
+  border: none;
+	border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
 //new

@@ -1,35 +1,37 @@
-<div class="post-show">
-  <div class="post-user-name">
-    <%= @user.name %>
-  </div>
-  <div class="post-content">
-    <%= image_tag @post.image_name1.url if @post.image_name1? %>
-    <p>国:<%= @post.country %></p>
-    <p>地域:<%= @post.city %></p>
-    <p>期間:<%= @post.howlong %></p>
-    <p>ビザ:<%= @post.visa %></p>
-    <p>費用:<%= @post.money %></p>
-    <p>学校名:<%= @post.schoolname %></p>
-    <p>エージェント:<%= @post.agent %></p>
-    <p>必需品:<%= @post.necessity %></p>
-    <% if current_user && @post.user_id == current_user.id %>
-      <div class="can-manipulate">
-        <div class="post-edit">
-        <%= link_to("編集", edit_post_path) %>
+<div class="post-body">
+  <div class="post-show">
+    <div class="post-user-name">
+      <%= @user.name %>
+    </div>
+    <div class="post-content">
+      <%= image_tag @post.image_name1.url if @post.image_name1? %>
+      <p>国:<%= @post.country %></p>
+      <p>地域:<%= @post.city %></p>
+      <p>期間:<%= @post.howlong %></p>
+      <p>ビザ:<%= @post.visa %></p>
+      <p>費用:<%= @post.money %></p>
+      <p>学校名:<%= @post.schoolname %></p>
+      <p>エージェント:<%= @post.agent %></p>
+      <p>必需品:<%= @post.necessity %></p>
+      <% if current_user && @post.user_id == current_user.id %>
+        <div class="can-manipulate">
+          <div class="post-edit">
+          <%= link_to("編集", edit_post_path) %>
+          </div>
+          <div class="post-delete">
+            <%= link_to("削除", post_path, {method:"delete"}) %>
+          </div>
         </div>
-        <div class="post-delete">
-          <%= link_to("削除", post_path, {method:"delete"}) %>
-        </div>
-      </div>
-  <% end %>
+    <% end %>
+    </div>
   </div>
-</div>
-<div class="comment-field">
-  <h3 class="comment title">Questions</h3>
-  <div class="comment-area">
-    <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
-  </div>
-  <div class="comment-create">
-    <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+  <div class="comment-field">
+    <h3 class="comment title">Questions</h3>
+    <div class="comment-area">
+      <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
+    </div>
+    <div class="comment-create">
+      <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+    </div>
   </div>
 </div>
