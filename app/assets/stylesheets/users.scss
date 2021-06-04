@@ -119,44 +119,68 @@ input[type="submit"] {
   color: red;
 }
 
-.profile {
+.show-head {
   width: 100%;
-}
-
-.user-icon img {
-  height: 12%;
-  width: 12%;
-}
-
-//user-card
-
-.about-post {
-  width: 100%;
-  border: 1px solid black;
-  position: relative;
-}
-
-.posted {
-  width: 60%;
-  box-sizing: border-box;
-  border: 1px green solid;
   display: flex;
   justify-content: center;
 }
 
-.toward-post {
-  height: 100%;
-  width: 40%;
+.profile {
+  position: relative;
+  width: 20%;
   box-sizing: border-box;
-  border: 1px solid red;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
+.profile-name {
+  position: absolute;
+  top: 80%;
+  right: 13%;
+}
+
+
+.toward-post {
+  width: 40%;
+  box-sizing: border-box;
+  padding-right: 80px;
+}
+
+.toward-post h2 {
+  margin-bottom: 30px;
+}
+
+.user-icon {
+  text-align: right;
+}
+
+.user-icon img {
+  height: 50%;
+  width: 50%;
+}
+
+//user-card
+.about-post {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+
+.about-post h2 {
+  border-top: 1px solid gray;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.posted {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
 .own-card {
-  width: 30%;
-  margin-right: 80px;
+  width: 18%;
+  margin-right: 100px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   flex-wrap: wrap;
 }

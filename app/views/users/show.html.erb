@@ -35,17 +35,24 @@
       <% end %>
     </ul>
   </div>
-
-  <div class="profile">
-    <div class="user-icon">
-      <%= image_tag "/hukumen.jpeg" %>
+  
+  <div class="show-head">
+    <div class="profile">
+      <div class="user-icon">
+        <%= image_tag "/hukumen.jpeg" %>
+      </div>
+      <div class="profile-name">
+        <h3><%= @user.name %></h3>
+      </div>
     </div>
-    <div class="profile-show">
-      <h3><%= @user.name %></h3>
+    <div class="toward-post">
+      <h2>please share your story!</h2>
+      <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
     </div>
   </div>
 
   <div class="about-post">
+    <h2>Your posts</h2>
     <div class="posted">
       <% @posts.each do |post| %>
         <div class="own-card">
@@ -68,10 +75,6 @@
           </div>
         </div>
       <% end %>
-    <div>
-    <div class="toward-post">
-      <h2>please share your story!</h2>
-      <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
-    </div>  
+    <div>  
   </div>
 </div>
