@@ -92,3 +92,81 @@ input[type="submit"] {
 .already-account a {
   color:  #FFCC00;
 }
+
+//user show
+.user-show-container {
+  height: 100%;
+  width: 100%;
+}
+
+.user-selection {
+  margin: 50px 0 50px 0;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.user-menus li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.user-menus a {
+  color: dimgray;
+}
+
+.user-logout a {
+  color: red;
+}
+
+.profile {
+  width: 100%;
+}
+
+.user-icon img {
+  height: 12%;
+  width: 12%;
+}
+
+//user-card
+
+.about-post {
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.posted {
+  width: 60%;
+  box-sizing: border-box;
+  border: 1px green solid;
+  display: flex;
+  justify-content: center;
+}
+
+.toward-post {
+  height: 100%;
+  width: 40%;
+  box-sizing: border-box;
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.own-card {
+  width: 30%;
+  margin-right: 80px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  flex-wrap: wrap;
+}
+
+.new-post-btn {
+  font-size: 20px;
+  padding: 15px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #66FF99;
+  border-radius: 3px;
+  background: #66FF99;
+}

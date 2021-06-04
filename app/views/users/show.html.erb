@@ -1,20 +1,77 @@
-<div class="profile-show">
-  <%= @user.name %>
-</div>
+<div class="user-show-container">
+  <div class="user-selection">
+    <ul class="user-menus">
+      <li>
+        <%= link_to("ALL", root_path) %>
+      </li>
+      <li>
+        <%= link_to("USA", home_usa_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("UK", home_uk_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("Canada", home_canada_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("Australia", home_australia_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("NewZealand", home_newzealand_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("SouthAfrica", home_southafrica_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("Malta", home_malta_path, remote: true) %>
+      </li>
+      <li>
+        <%= link_to("thePhilippines", home_philippines_path, remote: true) %>
+      </li>
+      <% if user_signed_in? %>
+      <li class="user-logout">
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 
-<% @posts.each do |post| %>
-  <div class="users-post">
-    <div class="uses-post-img">
+  <div class="profile">
+    <div class="user-icon">
+      <%= image_tag "/hukumen.jpeg" %>
     </div>
-    <div class="users-post-content">
-      <p>国:<%= post.country %></p>
-      <p>期間:<%= post.howlong %></p>
-      <p>ビザ:<%= post.visa %></p>
-      <p>学校:<%= post.schoolname %></p>
+    <div class="profile-show">
+      <h3><%= @user.name %></h3>
     </div>
   </div>
-<% end %>
 
-<div class="toward-post">
-  <%= link_to("Post", new_post_path) %>
+  <div class="about-post">
+    <div class="posted">
+      <% @posts.each do |post| %>
+        <div class="own-card">
+          <div class="k-head">
+            <%= image_tag post.image_name1.url if post.image_name1? %>
+            <div class="k-name">
+              <h3>@<%= post.user.name %></h3>
+            </div>
+          </div> 
+          <div class="k-middle">
+            <ul class="personal">
+              <li>国:<%= post.country %></li>
+              <li>地域:<%= post.city %></li>
+              <li>期間:<%= post.howlong %></li>
+              <li>費用:<%= post.money %></li>
+            </ul>
+          </div>
+          <div class="k-foot">
+            <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
+          </div>
+        </div>
+      <% end %>
+    <div>
+    <div class="toward-post">
+      <h2>please share your story!</h2>
+      <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
+    </div>  
+  </div>
 </div>

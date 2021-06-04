@@ -1,5 +1,5 @@
-<div class="post-body">
-  <div class="post-show">
+<div class="post-show">
+  <div class="post-card">
     <div class="post-user-name">
       <%= @user.name %>
     </div>
@@ -13,16 +13,16 @@
       <p>学校名:<%= @post.schoolname %></p>
       <p>エージェント:<%= @post.agent %></p>
       <p>必需品:<%= @post.necessity %></p>
-      <% if current_user && @post.user_id == current_user.id %>
+        <% if current_user && @post.user_id == current_user.id %>
         <div class="can-manipulate">
           <div class="post-edit">
-          <%= link_to("編集", edit_post_path) %>
+            <%= link_to("編集", edit_post_path) %>
           </div>
           <div class="post-delete">
             <%= link_to("削除", post_path, {method:"delete"}) %>
           </div>
         </div>
-    <% end %>
+        <% end %>
     </div>
   </div>
   <div class="comment-field">
