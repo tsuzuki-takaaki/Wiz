@@ -92,3 +92,105 @@ input[type="submit"] {
 .already-account a {
   color:  #FFCC00;
 }
+
+//user show
+.user-show-container {
+  height: 100%;
+  width: 100%;
+}
+
+.user-selection {
+  margin: 50px 0 50px 0;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.user-menus li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.user-menus a {
+  color: dimgray;
+}
+
+.user-logout a {
+  color: red;
+}
+
+.show-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  position: relative;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.profile-name {
+  position: absolute;
+  top: 80%;
+  right: 13%;
+}
+
+
+.toward-post {
+  width: 40%;
+  box-sizing: border-box;
+  padding-right: 80px;
+}
+
+.toward-post h2 {
+  margin-bottom: 30px;
+}
+
+.user-icon {
+  text-align: right;
+}
+
+.user-icon img {
+  height: 50%;
+  width: 50%;
+}
+
+//user-card
+.about-post {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+
+.about-post h2 {
+  border-top: 1px solid gray;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.posted {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+
+.own-card {
+  width: 18%;
+  margin-right: 100px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  flex-wrap: wrap;
+}
+
+.new-post-btn {
+  font-size: 20px;
+  padding: 15px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #66FF99;
+  border-radius: 3px;
+  background: #66FF99;
+}
