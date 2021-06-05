@@ -133,17 +133,76 @@
   cursor: pointer;
 }
 
-//new
-.form-content {
-  position: absolute;
-  left: 35%;
-  top: 50px;
-}
-.form {
-  font-size: 20px;
-  padding-top: 40px;
+//post-new
+.post-new-container {
+  height: 100%;
 }
 
+.form-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 60px;
+  width: 40%;
+  height: 700px;
+  text-align: center;
+  border: 1px solid #C0C0C0;
+}
+
+.form-content ul {
+  display: inline-block;
+}
+
+.form-content li {
+  text-align: left;
+}
+
+.form-content input {
+  height: 17px;
+}
+
+.form-content select {
+  height: 25px;
+}
+
+.form {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.post-photo {
+  height: 160px;
+  width: 80%;
+  display: inline-block;
+  padding: 2px 1em;
+  position: relative;
+  background-color:#f6f6f6;
+}
+
+.post-photo span {
+  position: absolute;
+  top: 27%;
+  left: 40%;
+  font-size: 50px;
+  color: #C0C0C0;
+}
+
+.post-photo input[type="file"] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit input {
+  height: auto;
+}
 .submit-form {
   display       : inline-block;
   border-radius : 6%;

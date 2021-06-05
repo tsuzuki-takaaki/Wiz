@@ -153,6 +153,9 @@ input[type="submit"] {
 }
 
 .user-icon img {
+  border: 2px solid black;
+  border-radius: 400px;
+  box-shadow: 0px 0px 10px #000;
   height: 50%;
   width: 50%;
 }
