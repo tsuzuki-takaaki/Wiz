@@ -91,6 +91,7 @@ input[type="submit"] {
 
 .already-account a {
   color:  #FFCC00;
+  -webkit-text-stroke: 0.3px black;
 }
 
 //user show
@@ -144,10 +145,6 @@ input[type="submit"] {
   padding-right: 80px;
 }
 
-.toward-post h2 {
-  margin-bottom: 30px;
-}
-
 .user-icon {
   text-align: right;
 }
@@ -160,17 +157,21 @@ input[type="submit"] {
   width: 50%;
 }
 
+.new-post-btn {
+  font-size: 20px;
+  padding: 15px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #66FF99;
+  border-radius: 3px;
+  background: #66FF99;
+}
+
 //user-card
 .about-post {
   width: 100%;
   margin-top: 70px;
   position: relative;
-}
-
-.about-post h2 {
-  border-top: 1px solid gray;
-  width: 70%;
-  margin: 0 auto;
 }
 
 .posted {
@@ -180,7 +181,6 @@ input[type="submit"] {
   justify-content: center;
 }
 
-
 .own-card {
   width: 18%;
   margin-right: 100px;
@@ -188,12 +188,23 @@ input[type="submit"] {
   flex-wrap: wrap;
 }
 
-.new-post-btn {
-  font-size: 20px;
-  padding: 15px;
-  height: 50px;
-  color: #fff;
-  border: 1px solid #66FF99;
-  border-radius: 3px;
-  background: #66FF99;
+.your-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.your-post::before, .your-post::after {
+  border-top: 2px solid gray;
+  content: "";
+  flex-grow: 0.3;
+}
+
+.your-post::before {
+  margin-right: 1rem;
+}
+
+.your-post::after {
+  margin-left: 1rem;
 }
