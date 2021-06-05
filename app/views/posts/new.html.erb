@@ -7,36 +7,28 @@
           <%= f.file_field :image_name1, class: "image" %>
         </li>
         <li class="county form">
-          <%= f.label :country, "国" %>
           <%= f.select :country, [["USA", "USA"], ["UK", "UK"], ["Canada", "Canada"], ["Australia", "Australia"], ["NewZealand", "Newzealand"], ["SouthAfrica", "SouthAfrica"], ["Malta", "Malta"], ["thePhilippines", "thePhilippines"]] %>
         </li>
         <li class="city form">
-          <%= f.label :city, "地域" %>
-          <%= f.text_field :city %>
+          <%= f.text_field :city, placeholder: "地域" %>
         </li>
         <li class="howlong form">
-          <%= f.label :howlong, "期間" %>
-          <%= f.text_field :howlong %>
+          <%= f.text_field :howlong, placeholder: "期間" %>
         </li>
         <li class="visa form">
-          <%= f.label :visa, "ビザの種類" %>
-          <%= f.text_field :visa %>
+          <%= f.text_field :visa, placeholder: "ビザの種類" %>
         </li>
         <li class="money form">
-          <%= f.label :money, "費用"%>
-          <%= f.text_field :money %>
+          <%= f.text_field :money, placeholder: "費用" %>
         </li>
         <li class="school form">
-          <%= f.label :schoolname, "学校名" %>
-          <%= f.text_field :schoolname %>
+          <%= f.text_field :schoolname, placeholder: "学校名" %>
         </li>
         <li class="agent form">
-          <%= f.label :agent, "エージェント" %>
-          <%= f.text_field :agent %>
+          <%= f.text_field :agent, placeholder: "エージェント" %>
         </li>
         <li class="necessity form">
-          <%= f.label :necessity, "必需品"%>
-          <%= f.text_field :necessity %>
+          <%= f.text_field :necessity, placeholder: "必需品" %>
         </li>
       </ul>
       <div class="submit">

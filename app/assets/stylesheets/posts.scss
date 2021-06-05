@@ -133,6 +133,8 @@
   cursor: pointer;
 }
 
+
+
 //post-new
 .post-new-container {
   height: 100%;
@@ -145,27 +147,26 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 30px;
   width: 40%;
-  height: 700px;
+  height: 750px;
   text-align: center;
   border: 1px solid #C0C0C0;
 }
 
-.form-content ul {
-  display: inline-block;
-}
-
-.form-content li {
-  text-align: left;
-}
-
 .form-content input {
-  height: 17px;
+  height: 30px;
+  width: 60%;
+  border: none;
+  border-radius: 3px;
+  background-color: #FFD5EC;
 }
 
 .form-content select {
-  height: 25px;
+  height: 30px;
+  width: 60%;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .form {
@@ -175,7 +176,7 @@
 
 .post-photo {
   height: 160px;
-  width: 80%;
+  width: 70%;
   display: inline-block;
   padding: 2px 1em;
   position: relative;
