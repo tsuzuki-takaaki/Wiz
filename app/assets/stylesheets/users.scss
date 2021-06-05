@@ -107,9 +107,17 @@ input[type="submit"] {
   width: 100%;
 }
 
+.user-selection ul {
+  text-align: right;
+}
+
 .user-menus li {
   display: inline;
   margin-right: 30px;
+}
+
+.user-menus li:last-child {
+  margin-right: 100px;
 }
 
 .user-menus a {

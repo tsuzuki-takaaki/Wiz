@@ -1,4 +1,24 @@
-<%= @page_title = "留学用掲示板" %>
+<% @page_title = "留学用掲示板" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menus">
+    <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
 <div class="top-main">
   <h2>Lets share your story</h2>
 </div>

@@ -2,31 +2,7 @@
   <div class="user-selection">
     <ul class="user-menus">
       <li>
-        <%= link_to("ALL", root_path) %>
-      </li>
-      <li>
-        <%= link_to("USA", home_usa_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("UK", home_uk_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("Canada", home_canada_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("Australia", home_australia_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("NewZealand", home_newzealand_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("SouthAfrica", home_southafrica_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("Malta", home_malta_path, remote: true) %>
-      </li>
-      <li>
-        <%= link_to("thePhilippines", home_philippines_path, remote: true) %>
+        <%= link_to("Top", root_path) %>
       </li>
       <% if user_signed_in? %>
       <li class="user-logout">
