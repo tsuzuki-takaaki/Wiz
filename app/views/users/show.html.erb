@@ -26,31 +26,36 @@
       <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
     </div>
   </div>
-
   <div class="about-post">
     <h2 class="your-post">Your posts</h2>
-    <div class="posted">
-      <% @posts.each do |post| %>
-        <div class="own-card">
-          <div class="k-head">
-            <%= image_tag post.image_name1.url if post.image_name1? %>
-            <div class="k-name">
-              <h3>@<%= post.user.name %></h3>
+    <% if @posts[0] %>
+      <div class="posted">
+        <% @posts.each do |post| %>
+          <div class="own-card">
+            <div class="k-head">
+              <%= image_tag post.image_name1.url if post.image_name1? %>
+              <div class="k-name">
+                <h3>@<%= post.user.name %></h3>
+              </div>
+            </div> 
+            <div class="k-middle">
+              <ul class="personal">
+                <li>国:<%= post.country %></li>
+                <li>地域:<%= post.city %></li>
+                <li>期間:<%= post.howlong %></li>
+                <li>費用:<%= post.money %></li>
+              </ul>
             </div>
-          </div> 
-          <div class="k-middle">
-            <ul class="personal">
-              <li>国:<%= post.country %></li>
-              <li>地域:<%= post.city %></li>
-              <li>期間:<%= post.howlong %></li>
-              <li>費用:<%= post.money %></li>
-            </ul>
+            <div class="k-foot">
+              <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
+            </div>
           </div>
-          <div class="k-foot">
-            <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
-          </div>
-        </div>
-      <% end %>
-    <div>  
+        <% end %>
+      <div>  
+    <% else %>
+      <div class="not-yet">
+        <h2>No posts</h2>
+      </div>
+    <% end %>
   </div>
 </div>
