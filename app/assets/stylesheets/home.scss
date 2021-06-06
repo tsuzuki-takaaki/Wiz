@@ -17,7 +17,18 @@ a {
 }
 
 //flash
+.flash {
+  color: white;
+  text-align: center;
+}
 
+.flash_notice {
+  background-color: blue;
+}
+
+.flash_alert {
+  background-color: red;
+}
 // header
 header {
   height: 64px;
