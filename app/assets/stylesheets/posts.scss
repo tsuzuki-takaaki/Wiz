@@ -152,31 +152,48 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background: radial-gradient(#661f66, #330a33);
 }
 
 .form-content {
-  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 30px 0;
   width: 500px;
-  height: 750px;
-  border: 1px solid #C0C0C0;
+  height: 70%;
+  border: 2px solid #ffccff;
+  box-shadow: 
+    0 1px 2px #1a091a, 
+    2px 1px 4px #330f33, 
+    2px 4px 3px #661f66, 
+    0 0 7px 2px #ffccff,
+    inset 0 1px 2px #1a091a, 
+    inset 2px 1px 4px #330f33, 
+    inset 2px 4px 3px #661f66, 
+    inset 0 0 7px 2px #ffccff;
 }
 
 .form-content input {
   height: 30px;
-  width: 60%;
+  width: 100%;
   border: none;
   border-radius: 3px;
-  background-color: #FFD5EC;
+  background-color: #fff;
 }
 
 .form-content select {
   height: 30px;
-  width: 60%;
+  width: 100%;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .form {
+  width: 40%;
   font-size: 20px;
   margin-top: 20px;
 }
@@ -192,9 +209,9 @@
 
 .post-photo span {
   position: absolute;
-  top: 27%;
-  left: 40%;
-  font-size: 50px;
+  top: 40%;
+  left: 20%;
+  font-size: 15px;
   color: #C0C0C0;
 }
 
@@ -208,11 +225,25 @@
   cursor: pointer;
 }
 
+.without-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.submit {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .submit input {
   height: auto;
 }
+
 .submit-form {
   display       : inline-block;
+  height: auto;
+  width: 50%;
   border-radius : 6%;
   font-size     : 17pt;
   text-align    : center;

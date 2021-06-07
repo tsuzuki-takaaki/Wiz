@@ -2,36 +2,36 @@
 <div class="post-new-container">
     <%= form_with model: @post do |f| %>
     <div class="form-content">
-      <ul>
-        <li class="post-photo">
-          <span>+</span>
-          <%= f.file_field :image_name1, class: "image" %>
-        </li>
-        <li class="county form">
+      <div class="post-photo">
+        <span>Please add your precious picture</span>
+        <%= f.file_field :image_name1, class: "image" %>
+      </div>
+      <div class="without-photo">
+        <div class="county form">
           <%= f.select :country, [["USA", "USA"], ["UK", "UK"], ["Canada", "Canada"], ["Australia", "Australia"], ["NewZealand", "Newzealand"], ["SouthAfrica", "SouthAfrica"], ["Malta", "Malta"], ["thePhilippines", "thePhilippines"]] %>
-        </li>
-        <li class="city form">
+        </div>
+        <div class="city form">
           <%= f.text_field :city, placeholder: "地域" %>
-        </li>
-        <li class="howlong form">
+        </div>
+        <div class="howlong form">
           <%= f.text_field :howlong, placeholder: "期間" %>
-        </li>
-        <li class="visa form">
+        </div>
+        <div class="visa form">
           <%= f.text_field :visa, placeholder: "ビザの種類" %>
-        </li>
-        <li class="money form">
+        </div>
+        <div class="money form">
           <%= f.text_field :money, placeholder: "費用" %>
-        </li>
-        <li class="school form">
+        </div>
+        <div class="school form">
           <%= f.text_field :schoolname, placeholder: "学校名" %>
-        </li>
-        <li class="agent form">
+        </div>
+        <div class="agent form">
           <%= f.text_field :agent, placeholder: "エージェント" %>
-        </li>
-        <li class="necessity form">
-          <%= f.text_field :necessity, placeholder: "必需品" %>
-        </li>
-      </ul>
+        </div>
+        <div class="necessity form">
+            <%= f.text_field :necessity, placeholder: "必需品" %>
+        </div>
+      </div>
       <div class="submit">
         <%= f.submit "Share", class:"submit-form"%>
       </div>
