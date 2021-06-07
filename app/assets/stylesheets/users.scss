@@ -1,7 +1,7 @@
 //login
 .login-container {
   height: 100%;
-  background-color: #FFD5EC;
+  background-color: #3cad7e;
 }
 
 .login-card {
@@ -16,6 +16,10 @@
   height: 60%;
   width: 30%;
   margin: auto;
+}
+
+.login-card h2 {
+  color: #3cad7e;
 }
 
 .box input {
@@ -37,7 +41,7 @@ input[type="email"], input[type="password"] {
 input[type="submit"] {
   font-weight: bold;
   color: #fff;
-  background-color: #00CC66;
+  background-color: #0d6efd;
   cursor: pointer;
 }
 
@@ -54,7 +58,7 @@ input[type="submit"] {
 }
 
 .without-account a {
-  color: #FFCC00;
+  color: #fab30f;
 }
 //remember me if you need to use
 /*<% if devise_mapping.rememberable? %>
@@ -67,7 +71,7 @@ input[type="submit"] {
 //signup
 .signup-container {
   height: 100%;
-  background-color: #77F9C3;
+  background-color: #3cad7e;
 }
 .signup-card {
   position: absolute;
@@ -79,8 +83,12 @@ input[type="submit"] {
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
   height: 70%;
-  width: 37%;
+  width: 30%;
   margin: auto;
+}
+
+.signup-card h2 {
+  color: #3cad7e;
 }
 
 .name input[type="text"] {
@@ -90,8 +98,8 @@ input[type="submit"] {
 }
 
 .already-account a {
-  color:  #FFCC00;
-  -webkit-text-stroke: 0.3px black;
+  color:  #fab30f;
+  font-weight: bold;
 }
 
 //user show

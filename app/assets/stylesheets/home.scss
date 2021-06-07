@@ -1,4 +1,5 @@
 //for all
+//#3cad7e
 * {
   text-align: center;
 }
@@ -66,7 +67,7 @@ header {
   background: #3cad7e;
   background-size: cover;
 }
-//#3cad7e
+
 .top-main h1 {
   width: 15%;
   padding-top: 4px;
@@ -83,6 +84,7 @@ header {
     inset 2px 4px 3px #348060, 
     inset 0 0 7px 2px #b5f7dc;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .selection {
@@ -159,9 +161,9 @@ header {
   position: absolute;
   top: 7%;
   left: 17%;
-  border: #4676D7 1px solid;
+  border: #0d6efd 1px solid;
   border-radius: 4px;
-  background-color: #4676D7;
+  background-color: #0d6efd;
   font-size: 14px;
   padding: 8px 16px;
   color: #fff;
