@@ -102,6 +102,26 @@ input[type="submit"] {
   font-weight: bold;
 }
 
+//edit
+.user-edit-container {
+  height: 100%;
+  background-color: #3cad7e;
+}
+
+.user-edit-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(black, 0.4);
+  height: 70%;
+  width: 30%;
+  margin: auto;
+}
+
 //user show
 .user-show-container {
   height: 100%;

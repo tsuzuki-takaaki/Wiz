@@ -37,7 +37,6 @@
   overflow: scroll;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  background: linear-gradient(green, pink);
 }
 
 .comment-area::-webkit-scrollbar {
@@ -66,7 +65,7 @@
   width: 35%;
   border-radius: 10px;
   color: #555;
-  background: #fff;
+  background: #a7fad8;
   margin-top: 50px;
   font-size: 10px;
 }
@@ -82,7 +81,7 @@
   left: 100%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid #a7fad8;
 }
 
 .left {
@@ -96,7 +95,7 @@
   left: -20%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid  #fff;
+  border-right: 15px solid  #a7fad8;
 }
 
 .comment-username {
