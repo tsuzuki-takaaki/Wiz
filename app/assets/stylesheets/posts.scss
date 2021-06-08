@@ -14,16 +14,49 @@
   margin-right: 60px;
 }
 
-.post-user-name p{
+.post-user-name {
   height: 6%;
-  text-align: right;
-  margin-right: 10px;
-  border: 1px solid black;
+  box-sizing: border-box;
 }
 
-.post-content img {
+.post-user-name p{
+  text-align: right;
+  margin-right: 10px;
+}
+
+.post-image {
+  height: 35%;
+  box-sizing: border-box;
+}
+
+.post-image img {
   width: 80%;
-  height: 200px;
+  height: 100%;
+}
+
+.post-content {
+  height: 57%;
+  box-sizing: border-box;
+}
+
+.whole-content {
+  display: flex;
+  height: 12%;
+  width: 65%;
+  margin: 0 auto;
+  border-bottom: 1px solid #cccccc;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.question-content {
+  color: #cccccc;
+}
+
+.answer-content {
+  height: 100%;
+  width: 50%;
+  font-weight: bold;
 }
 
 .comment-field {
