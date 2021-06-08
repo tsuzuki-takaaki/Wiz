@@ -10,6 +10,7 @@
   width: 40%;
   height: 90%;
   border: 1px solid black;
+  border-radius: 5px;
   margin-right: 60px;
 }
 
@@ -26,14 +27,14 @@
 }
 
 .comment-field {
-  width: 35%;
-  height: 90%;
+  width: 30%;
+  height: 75%;
 }
 
 //commentbox
 .comment-area {
   margin: 0 auto;
-  height: 92%;
+  height: 81%;
   overflow: scroll;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
@@ -92,7 +93,7 @@
   content: "";
   position: absolute;
   top: 60%;
-  left: -20%;
+  left: -25%;
   margin-top: -15px;
   border: 15px solid transparent;
   border-right: 15px solid  #a7fad8;
@@ -115,7 +116,7 @@
 }
 
 .comment-form {
-  margin-top: 3px;
+  margin-top: 1px;
 }
 
 .input-mysize {
