@@ -9,29 +9,20 @@
 .post-card {
   width: 37%;
   height: 90%;
-  border: 1px solid black;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
   border-radius: 5px;
   margin-right: 60px;
 }
 
-.post-user-name {
-  height: 6%;
-  box-sizing: border-box;
-}
-
-.post-user-name p{
-  text-align: right;
-  margin-right: 10px;
-}
-
 .post-image {
-  height: 35%;
+  height: 41%;
   box-sizing: border-box;
 }
 
 .post-image img {
-  width: 90%;
+  width: 100%;
   height: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .post-content {
@@ -99,7 +90,7 @@
   width: 35%;
   border-radius: 10px;
   color: #555;
-  background: #a7fad8;
+  background: #d4d6d5;
   margin-top: 50px;
   font-size: 10px;
 }
@@ -115,7 +106,7 @@
   left: 100%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #a7fad8;
+  border-left: 15px solid #d4d6d5;
 }
 
 .left {
@@ -129,7 +120,7 @@
   left: -25%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid  #a7fad8;
+  border-right: 15px solid  #d4d6d5;
 }
 
 .comment-username {
