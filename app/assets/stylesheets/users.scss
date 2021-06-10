@@ -1,7 +1,7 @@
 //login
 .login-container {
   height: 100%;
-  background-color: #FFD5EC;
+  background-color: #3cad7e;
 }
 
 .login-card {
@@ -16,6 +16,10 @@
   height: 60%;
   width: 30%;
   margin: auto;
+}
+
+.login-card h2 {
+  color: #3cad7e;
 }
 
 .box input {
@@ -37,7 +41,7 @@ input[type="email"], input[type="password"] {
 input[type="submit"] {
   font-weight: bold;
   color: #fff;
-  background-color: #00CC66;
+  background-color: #0d6efd;
   cursor: pointer;
 }
 
@@ -54,7 +58,7 @@ input[type="submit"] {
 }
 
 .without-account a {
-  color: #FFCC00;
+  color: #fab30f;
 }
 //remember me if you need to use
 /*<% if devise_mapping.rememberable? %>
@@ -67,7 +71,7 @@ input[type="submit"] {
 //signup
 .signup-container {
   height: 100%;
-  background-color: #77F9C3;
+  background-color: #3cad7e;
 }
 .signup-card {
   position: absolute;
@@ -79,8 +83,12 @@ input[type="submit"] {
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
   height: 70%;
-  width: 37%;
+  width: 30%;
   margin: auto;
+}
+
+.signup-card h2 {
+  color: #3cad7e;
 }
 
 .name input[type="text"] {
@@ -90,7 +98,28 @@ input[type="submit"] {
 }
 
 .already-account a {
-  color:  #FFCC00;
+  color:  #fab30f;
+  font-weight: bold;
+}
+
+//edit
+.user-edit-container {
+  height: 100%;
+  background-color: #3cad7e;
+}
+
+.user-edit-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(black, 0.4);
+  height: 70%;
+  width: 30%;
+  margin: auto;
 }
 
 //user show
@@ -106,9 +135,17 @@ input[type="submit"] {
   width: 100%;
 }
 
+.user-selection ul {
+  text-align: right;
+}
+
 .user-menus li {
   display: inline;
   margin-right: 30px;
+}
+
+.user-menus li:last-child {
+  margin-right: 100px;
 }
 
 .user-menus a {
@@ -144,45 +181,16 @@ input[type="submit"] {
   padding-right: 80px;
 }
 
-.toward-post h2 {
-  margin-bottom: 30px;
-}
-
 .user-icon {
   text-align: right;
 }
 
 .user-icon img {
+  border: 2px solid black;
+  border-radius: 400px;
+  box-shadow: 0px 0px 10px #000;
   height: 50%;
   width: 50%;
-}
-
-//user-card
-.about-post {
-  width: 100%;
-  margin-top: 70px;
-  position: relative;
-}
-
-.about-post h2 {
-  border-top: 1px solid gray;
-  width: 70%;
-  margin: 0 auto;
-}
-
-.posted {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-}
-
-
-.own-card {
-  width: 18%;
-  margin-right: 100px;
-  box-shadow: 0 10px 20px rgba(black, 0.2);
-  flex-wrap: wrap;
 }
 
 .new-post-btn {
@@ -193,4 +201,46 @@ input[type="submit"] {
   border: 1px solid #66FF99;
   border-radius: 3px;
   background: #66FF99;
+}
+
+//user-card
+.about-post {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+
+.posted {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.own-card {
+  width: 18%;
+  margin-right: 100px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  flex-wrap: wrap;
+}
+
+.your-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.your-post::before, .your-post::after {
+  border-top: 2px solid gray;
+  content: "";
+  flex-grow: 0.3;
+}
+
+.your-post::before {
+  margin-right: 1rem;
+}
+
+.your-post::after {
+  margin-left: 1rem;
 }

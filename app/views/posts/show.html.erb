@@ -1,18 +1,42 @@
 <div class="post-show">
+
   <div class="post-card">
-    <div class="post-user-name">
-      <%= @user.name %>
+    <div class="post-image">
+      <%= image_tag @post.image_name1.url if @post.image_name1? %>
     </div>
     <div class="post-content">
-      <%= image_tag @post.image_name1.url if @post.image_name1? %>
-      <p>国:<%= @post.country %></p>
-      <p>地域:<%= @post.city %></p>
-      <p>期間:<%= @post.howlong %></p>
-      <p>ビザ:<%= @post.visa %></p>
-      <p>費用:<%= @post.money %></p>
-      <p>学校名:<%= @post.schoolname %></p>
-      <p>エージェント:<%= @post.agent %></p>
-      <p>必需品:<%= @post.necessity %></p>
+      <div class="whole-content">
+        <p class="question-content">country</p>
+        <p class="answer-content"><%= @post.country %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">city or town</p>
+        <p class="answer-content"><%= @post.city %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">period</p>
+        <p class="answer-content"><%= @post.howlong %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">visa</p>
+        <p class="answer-content"><%= @post.visa %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">cost</p>
+        <p class="answer-content"><%= @post.money %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">school</p>
+        <p class="answer-content"><%= @post.schoolname %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">agent</p>
+        <p class="answer-content"><%= @post.agent %></p>
+      </div>
+      <div class="whole-content">
+        <p class="question-content">necessity</p>
+        <p class="answer-content"><%= @post.necessity %></p>
+      </div>
         <% if current_user && @post.user_id == current_user.id %>
         <div class="can-manipulate">
           <div class="post-edit">
@@ -25,8 +49,9 @@
         <% end %>
     </div>
   </div>
+
   <div class="comment-field">
-    <h3 class="comment title">Questions</h3>
+    <p class="comment-title">Questions</p>
     <div class="comment-area">
       <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
     </div>
@@ -34,4 +59,5 @@
       <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
     </div>
   </div>
+
 </div>

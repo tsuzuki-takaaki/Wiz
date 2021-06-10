@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wiz</title>
+    <title><%= page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,30 +11,7 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
-        <ul class="header-menus">
-          <% if user_signed_in? %>
-            <li>
-              <%= link_to(current_user.name, user_path(current_user.id)) %>
-            </li>
-            <li>
-              <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
-            </li>
-          <% else %>
-            <li>
-              <%= link_to("login", new_user_session_path) %> 
-            <li>
-              <%= link_to("Signup", new_user_registration_path) %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </header>
- 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+    <%= render partial: "layouts/flash" %>
     <%= yield %>
   </body>
 </html>

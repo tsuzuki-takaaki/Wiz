@@ -1,5 +1,26 @@
+<% @page_title = "留学用掲示板" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menus">
+    <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
 <div class="top-main">
-  <h2>Lets share your story</h2>
+  <h1>Wiz</h1>
 </div>
 <div class="selection">
   <ul class="select-menus">
@@ -22,16 +43,18 @@
       <%= link_to("NewZealand", home_newzealand_path, remote: true) %>
     </li>
     <li>
-      <%= link_to("SouthAfrica", home_southafrica_path, remote: true) %>
-    </li>
-    <li>
       <%= link_to("Malta", home_malta_path, remote: true) %>
     </li>
     <li>
       <%= link_to("thePhilippines", home_philippines_path, remote: true) %>
+    </li>
+    <li>
+      <%= link_to("QuestionBox", "#") %>
     </li>
   </ul>
 </div>
 <div class="card-field">
   <%= render partial: 'home/top', locals: {posts:@posts} %>
 </div>
+<footer>
+</footer>

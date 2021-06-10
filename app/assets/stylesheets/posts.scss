@@ -1,41 +1,76 @@
 //show
-.post-user-name {
-  position: absolute;
-  top: 5%;
-  left: 40%;
+.post-show {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.post-card {
+  width: 37%;
+  height: 90%;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  border-radius: 5px;
+  margin-right: 60px;
+}
+
+.post-image {
+  height: 41%;
+  box-sizing: border-box;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .post-content {
-  position: absolute;
-  top: 60px;
-  left: 10%;
-  max-width: 60%;
+  height: 57%;
+  box-sizing: border-box;
 }
 
-.post-content img {
-  height: 250px;
-  width: 404px;
+.whole-content {
+  display: flex;
+  height: 12%;
+  width: 65%;
+  margin: 0 auto;
+  border-bottom: 1px solid #cccccc;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.question-content {
+  color: #cccccc;
+}
+
+.answer-content {
+  height: 100%;
+  width: 65%;
+  font-weight: bold;
+}
+
+.comment-field {
+  width: 30%;
+  height: 75%;
 }
 
 //commentbox
-.comment-field {
-  position: absolute;
-  left: 55%;
-  width: 35%;
-  height: 85%;
-}
-
 .comment-area {
   margin: 0 auto;
-  height: 92%;
+  height: 81%;
   overflow: scroll;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  background-color: #FF9872;
 }
 
 .comment-area::-webkit-scrollbar {
   display:none;
+}
+
+//partial
+.comments-count {
+  margin-bottom: -10px;
 }
 
 .half-right {
@@ -55,7 +90,7 @@
   width: 35%;
   border-radius: 10px;
   color: #555;
-  background: #fff;
+  background: #d4d6d5;
   margin-top: 50px;
   font-size: 10px;
 }
@@ -71,7 +106,7 @@
   left: 100%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid #d4d6d5;
 }
 
 .left {
@@ -82,10 +117,10 @@
   content: "";
   position: absolute;
   top: 60%;
-  left: -20%;
+  left: -25%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid  #fff;
+  border-right: 15px solid  #d4d6d5;
 }
 
 .comment-username {
@@ -105,14 +140,14 @@
 }
 
 .comment-form {
-  margin-top: 3px;
+  margin-top: 1px;
 }
 
 .input-mysize {
   height: 35px;
   width: 55%;
   display: inline-block;
-  font-size: 100%;
+  font-size: 20px;
   box-sizing: border-box;
   border-radius: 5px 0 0 5px;
   border: 1px solid #ccc;
@@ -133,19 +168,106 @@
   cursor: pointer;
 }
 
-//new
+
+
+//post-new
+.post-new-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(#661f66, #330a33);
+}
+
 .form-content {
   position: absolute;
-  left: 35%;
-  top: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 30px 0;
+  width: 500px;
+  height: 70%;
+  border: 2px solid #ffccff;
+  box-shadow: 
+    0 1px 2px #1a091a, 
+    2px 1px 4px #330f33, 
+    2px 4px 3px #661f66, 
+    0 0 7px 2px #ffccff,
+    inset 0 1px 2px #1a091a, 
+    inset 2px 1px 4px #330f33, 
+    inset 2px 4px 3px #661f66, 
+    inset 0 0 7px 2px #ffccff;
 }
+
+.form-content input {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.form-content select {
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .form {
+  width: 40%;
   font-size: 20px;
-  padding-top: 40px;
+  margin-top: 20px;
+}
+
+.post-photo {
+  height: 160px;
+  width: 70%;
+  display: inline-block;
+  padding: 2px 1em;
+  position: relative;
+  background-color:#f6f6f6;
+}
+
+.post-photo span {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 15px;
+  color: #C0C0C0;
+}
+
+.post-photo input[type="file"] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.without-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.submit {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submit input {
+  height: auto;
 }
 
 .submit-form {
   display       : inline-block;
+  height: auto;
+  width: 50%;
   border-radius : 6%;
   font-size     : 17pt;
   text-align    : center;
