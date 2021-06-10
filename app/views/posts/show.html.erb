@@ -1,5 +1,4 @@
 <div class="post-show">
-
   <div class="post-card">
     <div class="post-image">
       <%= image_tag @post.image_name1.url if @post.image_name1? %>
@@ -51,6 +50,9 @@
   </div>
 
   <div class="comment-field">
+    <div class="show-title">
+      <h1>Posted by <%= @post.user.name %></h1>
+    </div>
     <p class="comment-title">Questions</p>
     <div class="comment-area">
       <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>

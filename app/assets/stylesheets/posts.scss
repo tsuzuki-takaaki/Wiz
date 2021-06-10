@@ -4,6 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background: linear-gradient(#f68084,#a6c0fe);
 }
 
 .post-card {
@@ -12,6 +13,8 @@
   box-shadow: 0 10px 20px rgba(black, 0.2);
   border-radius: 5px;
   margin-right: 60px;
+  background-color: #fff;
+  margin-top: 25px;
 }
 
 .post-image {
@@ -58,10 +61,11 @@
 //commentbox
 .comment-area {
   margin: 0 auto;
-  height: 81%;
+  height: 90%;
   overflow: scroll;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
+  background-color: #fff;
 }
 
 .comment-area::-webkit-scrollbar {
@@ -90,7 +94,7 @@
   width: 35%;
   border-radius: 10px;
   color: #555;
-  background: #d4d6d5;
+  background: #09b32e;
   margin-top: 50px;
   font-size: 10px;
 }
@@ -106,7 +110,7 @@
   left: 100%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-left: 15px solid #d4d6d5;
+  border-left: 15px solid #09b32e;
 }
 
 .left {
@@ -120,7 +124,7 @@
   left: -25%;
   margin-top: -15px;
   border: 15px solid transparent;
-  border-right: 15px solid  #d4d6d5;
+  border-right: 15px solid #09b32e;
 }
 
 .comment-username {

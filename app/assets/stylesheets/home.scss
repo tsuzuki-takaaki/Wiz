@@ -22,7 +22,7 @@ footer {
   top: 1400px;
   height: 200px;
   width: 100%;
-  background-color: dimgray;
+  background-color: rgba(73,71,77,0.7);
 }
 //flash
 .flash {
@@ -170,6 +170,7 @@ header {
   border-bottom: 1px solid #cccccc;
   box-sizing: border-box;
   align-items: center;
+  padding-top: 4px;
 }
 
 .top-question {
