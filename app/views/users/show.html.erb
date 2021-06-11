@@ -12,21 +12,26 @@
     </ul>
   </div>
   
-  <div class="show-head">
+  <div class="about-profile">
     <div class="profile">
-      <div class="user-icon">
-        <%= image_tag "/hukumen.jpeg" %>
+      <div class="profile-left">
+        <div class="user-icon">
+          <%= image_tag "/hukumen.jpeg" %>
+        </div>
+        <div class="profile-name">
+          <h3><%= @user.name %></h3>
+          <h5><%= link_to("Edit", edit_user_registration_path) %></h5>
+        </div>
       </div>
-      <div class="profile-name">
-        <h3><%= @user.name %></h3>
-        <h4><%= link_to("Edit", edit_user_registration_path) %></h4>
+      <div class="profile-right">
+        <h4>please share your story!</h4>
+        <p>
+          <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
+        </p>
       </div>
-    </div>
-    <div class="toward-post">
-      <h2>please share your story!</h2>
-      <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
     </div>
   </div>
+
   <div class="about-post">
     <h2 class="your-post">Your posts</h2>
     <% if @posts[0] %>
@@ -70,4 +75,5 @@
       </div>
     <% end %>
   </div>
+
 </div>

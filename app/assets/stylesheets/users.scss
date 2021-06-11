@@ -129,11 +129,11 @@ input[type="submit"] {
 }
 
 .user-selection {
-  margin: 0 0 50px 0;
+  height: 8%;
   font-size: 18px;
   font-weight: bold;
   width: 100%;
-  border: 1px solid black;
+  margin-bottom: -15px;
 }
 
 .user-selection ul {
@@ -157,49 +157,75 @@ input[type="submit"] {
   color: red;
 }
 
-.show-head {
+.about-profile {
+  height: 30%;
   width: 100%;
   display: flex;
   justify-content: center;
-  border: 1px solid black;
 }
 
 .profile {
-  position: relative;
-  width: 20%;
-  box-sizing: border-box;
-  border: 1px solid black;
+  height: 100%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
 }
 
-.profile-name {
-  position: absolute;
-  top: 80%;
-  right: 13%;
-}
-
-
-.toward-post {
+.profile-left {
   width: 40%;
+  height: 100%;
   box-sizing: border-box;
-  padding-right: 80px;
+  padding-top: 30px;
+  padding-left: 100px;
 }
 
-.user-icon {
-  text-align: right;
+.profile-right {
+  width: 50%;
+  height: 75%;
+  box-sizing: border-box;
+  margin: auto 0;
 }
 
 .user-icon img {
   border: 2px solid black;
   border-radius: 400px;
   box-shadow: 0px 0px 10px #000;
+  height: 100px;
+  width: 100px;
+  vertical-align: bottom;
+}
+
+.profile-name {
+  height: 30%;
+}
+
+.profile-name h3 {
+  margin-top: auto;
+}
+
+.profile-name h5 {
+  margin-top: -20px;
+}
+
+.profile-right h4 {
+  margin-bottom: -15px;
+  width: 80%;
+}
+
+.profile-right p {
   height: 50%;
-  width: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-post-btn {
+  display: block;
+  height: 50%;
+  width: 80%;
+  padding-top: 11px;
   font-size: 20px;
-  padding: 15px;
-  height: 50px;
   color: #fff;
   border: 1px solid #66FF99;
   border-radius: 3px;
@@ -208,8 +234,8 @@ input[type="submit"] {
 
 //user-card
 .about-post {
+  height: 60%;
   width: 100%;
-  margin-top: 70px;
 }
 
 .posted {
