@@ -174,15 +174,13 @@
   cursor: pointer;
 }
 
-
-
 //post-new
 .post-new-container {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  background: radial-gradient(#661f66, #330a33);
+  background: linear-gradient(#f68084,#a6c0fe);
 }
 
 .form-content {
@@ -195,16 +193,8 @@
   padding: 30px 0;
   width: 500px;
   height: 70%;
-  border: 2px solid #ffccff;
-  box-shadow: 
-    0 1px 2px #1a091a, 
-    2px 1px 4px #330f33, 
-    2px 4px 3px #661f66, 
-    0 0 7px 2px #ffccff,
-    inset 0 1px 2px #1a091a, 
-    inset 2px 1px 4px #330f33, 
-    inset 2px 4px 3px #661f66, 
-    inset 0 0 7px 2px #ffccff;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(black, 0.4);
 }
 
 .form-content input {
@@ -212,6 +202,7 @@
   width: 100%;
   border: none;
   border-radius: 3px;
+  border:1px solid #D3D3D3;
   background-color: #fff;
 }
 
