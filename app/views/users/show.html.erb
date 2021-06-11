@@ -19,6 +19,7 @@
       </div>
       <div class="profile-name">
         <h3><%= @user.name %></h3>
+        <h4><%= link_to("Edit", edit_user_registration_path) %></h4>
       </div>
     </div>
     <div class="toward-post">
@@ -33,21 +34,32 @@
         <% @posts.each do |post| %>
           <div class="own-card">
             <div class="k-head">
-              <%= image_tag post.image_name1.url if post.image_name1? %>
-              <div class="k-name">
-                <h3>@<%= post.user.name %></h3>
+              <div class="top-image">
+                <%= image_tag post.image_name1.url if post.image_name1? %>
               </div>
             </div> 
             <div class="k-middle">
-              <ul class="personal">
-                <li>国:<%= post.country %></li>
-                <li>地域:<%= post.city %></li>
-                <li>期間:<%= post.howlong %></li>
-                <li>費用:<%= post.money %></li>
-              </ul>
+              <div class="top-whole">
+                <p class="top-question">country</p>
+                <p class="top-answer"><%= post.country %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">city</p>
+                <p class="top-answer"><%= post.city %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">period</p>
+                <p class="top-answer"><%= post.howlong %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">cost</p>
+                <p class="top-answer"><%= post.money %></p>
+              </div>
             </div>
             <div class="k-foot">
-              <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
+              <p class="more-watch">
+                <%= link_to("Read more", post_path(post.id), class: "info-button") %>
+              </p>
             </div>
           </div>
         <% end %>
@@ -59,5 +71,3 @@
     <% end %>
   </div>
 </div>
-
-<%= link_to("Edit", edit_user_registration_path) %>

@@ -129,10 +129,11 @@ input[type="submit"] {
 }
 
 .user-selection {
-  margin: 50px 0 50px 0;
+  margin: 0 0 50px 0;
   font-size: 18px;
   font-weight: bold;
   width: 100%;
+  border: 1px solid black;
 }
 
 .user-selection ul {
@@ -160,12 +161,14 @@ input[type="submit"] {
   width: 100%;
   display: flex;
   justify-content: center;
+  border: 1px solid black;
 }
 
 .profile {
   position: relative;
   width: 20%;
   box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .profile-name {
@@ -207,21 +210,22 @@ input[type="submit"] {
 .about-post {
   width: 100%;
   margin-top: 70px;
-  position: relative;
 }
 
 .posted {
   width: 100%;
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .own-card {
-  width: 18%;
-  margin-right: 100px;
+  width: 23%;
+  height: 296px;
+  border-radius: 5px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  flex-wrap: wrap;
+  margin-right: 40px;
 }
 
 .your-post {
