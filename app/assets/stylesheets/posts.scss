@@ -53,6 +53,17 @@
   font-weight: bold;
 }
 
+.can-manipulate {
+  width: 18%;
+  position: relative;
+  left: 370px;
+  bottom: 7px;
+}
+
+.post-edit a {
+  color: #aff283;
+}
+
 .comment-field {
   width: 30%;
   height: 75%;
@@ -296,7 +307,7 @@
 
 .form-heading {
   margin: 0;
-  padding-top: 10px;
+  padding-top: 20px;
   color: #fff;
 }
 
@@ -321,4 +332,14 @@
 .edit-photo img {
   height: 100%;
   width: 100%;
+}
+
+.post-delete {
+  position: absolute;
+  top: 90%;
+  left: 63%;
+}
+
+.post-delete a {
+  color: #fff;
 }

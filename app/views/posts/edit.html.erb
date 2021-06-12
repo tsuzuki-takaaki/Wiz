@@ -38,4 +38,7 @@
       </div>
     </div>
     <% end %>
+    <div class="post-delete">
+      <%= link_to("delete post", post_path, {method:"delete", data: { confirm: "削除しますか？"}}) %>
+    </div>
 </div>
