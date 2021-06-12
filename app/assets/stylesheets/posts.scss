@@ -193,6 +193,7 @@
   padding: 30px 0;
   width: 500px;
   height: 70%;
+  border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
 }
@@ -210,6 +211,7 @@
   height: 30px;
   width: 100%;
   border-radius: 3px;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -283,4 +285,40 @@
   box-shadow    : none;
   color         : #000066;
   background    : #ffffff;
+}
+
+//post edit
+.post-edit-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f68084,#a6c0fe);
+}
+
+.form-heading {
+  margin: 0;
+  padding-top: 10px;
+  color: #fff;
+}
+
+.edit-photo {
+  height: 180px;
+  width: 68%;
+  display: inline-block;
+  position: relative;
+  background-color: black;
+}
+
+.edit-photo input[type="file"] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.edit-photo img {
+  height: 100%;
+  width: 100%;
 }
