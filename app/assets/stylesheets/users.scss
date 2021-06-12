@@ -101,7 +101,6 @@ input[type="submit"] {
   color:  #fab30f;
   font-weight: bold;
 }
-
 //edit
 .user-edit-container {
   height: 100%;
@@ -117,44 +116,19 @@ input[type="submit"] {
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
-  height: 70%;
+  height: 63%;
   width: 30%;
   margin: auto;
 }
-
 //user show
+.for-user a {
+  color: #07f78f;
+  text-shadow: none;
+}
+
 .user-show-container {
   height: 100%;
   width: 100%;
-}
-
-.user-selection {
-  height: 8%;
-  font-size: 18px;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: -45px;
-}
-
-.user-selection ul {
-  text-align: right;
-}
-
-.user-menus li {
-  display: inline;
-  margin-right: 30px;
-}
-
-.user-menus li:last-child {
-  margin-right: 100px;
-}
-
-.user-menus a {
-  color: dimgray;
-}
-
-.user-logout a {
-  color: red;
 }
 
 .about-profile {
@@ -169,6 +143,7 @@ input[type="submit"] {
   width: 55%;
   display: flex;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .profile-left {
@@ -207,6 +182,10 @@ input[type="submit"] {
   margin-top: -20px;
 }
 
+.profile-name a {
+  color: #040dc2;
+}
+
 .profile-right h4 {
   margin-bottom: -15px;
   width: 80%;
@@ -231,7 +210,6 @@ input[type="submit"] {
   border-radius: 3px;
   background: #07f78f;
 }
-
 //user-card
 .about-post {
   height: 60%;

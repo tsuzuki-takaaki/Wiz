@@ -1,4 +1,27 @@
 <% @page_title = "Post Edit" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menus for-post">
+      <li>
+        <%= link_to("top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
 <div class="post-edit-container">
     <%= form_with model: @post do |f| %>
     <h1 class="form-heading">Post Edit</h1>

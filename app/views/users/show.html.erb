@@ -1,18 +1,17 @@
 <% @page_title = "#{@user.name}'s page"%>
-<div class="user-show-container">
-  <div class="user-selection">
-    <ul class="user-menus">
+<header>
+  <div class="header-logo">
+    <ul class="header-menus for-user">
       <li>
-        <%= link_to("Top", root_path) %>
+        <%= link_to("top", root_path) %>
       </li>
-      <% if user_signed_in? %>
-      <li class="user-logout">
+      <li>
         <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
       </li>
-      <% end %>
     </ul>
   </div>
-  
+</header>
+<div class="user-show-container">
   <div class="about-profile">
     <div class="profile">
       <div class="profile-left">

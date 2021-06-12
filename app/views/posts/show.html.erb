@@ -1,5 +1,28 @@
 <% @page_title = "post by #{@post.user.name}" %>
-<div class="post-show">
+<header>
+  <div class="header-logo">
+    <ul class="header-menus for-post">
+      <li>
+        <%= link_to("top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="post-show-container">
   <div class="post-card">
     <div class="post-image">
       <%= image_tag @post.image_name1.url if @post.image_name1? %>
@@ -49,7 +72,7 @@
 
   <div class="comment-field">
     <div class="show-title">
-      <h1>Posted by <%= @post.user.name %></h1>
+      <h2>Posted by <span><%= @post.user.name %></span></h2>
     </div>
     <p class="comment-title">Questions</p>
     <div class="comment-area">
