@@ -259,10 +259,11 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  color: #d9d8d7;
 }
 
 .your-post::before, .your-post::after {
-  border-top: 2px solid gray;
+  border-top: 2px solid #d9d8d7;
   content: "";
   flex-grow: 0.3;
 }
@@ -273,4 +274,8 @@ input[type="submit"] {
 
 .your-post::after {
   margin-left: 1rem;
+}
+
+.not-yet {
+  color: #d9d8d7;
 }
