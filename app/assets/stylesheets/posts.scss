@@ -128,15 +128,11 @@
   display: inline-block;
   padding: 2px 1em;
   position: relative;
-  background-color:#f6f6f6;
 }
 
-.post-photo span {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  font-size: 15px;
-  color: #C0C0C0;
+.post-photo img {
+  height: 100%;
+  width: 100%;
 }
 
 .post-photo input[type="file"] {
