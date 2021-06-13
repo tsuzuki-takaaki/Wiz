@@ -1,6 +1,6 @@
 <div class="comment-form">
   <%= form_with(model: [post, comment], local: false ) do |f| %>
-    <%= f.text_area :content, class: "input-mysize" %>
+    <%= f.text_area :content, class: "comment-input" %>
     <%= f.submit "Send", class: "send-btn" %>
   <% end %>
 </div>

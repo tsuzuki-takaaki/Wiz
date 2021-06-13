@@ -1,7 +1,7 @@
-//commentbox
+//comment-field
 .comment-area {
-  margin: 0 auto;
   height: 90%;
+  width: 100%;
   overflow: scroll;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
@@ -11,8 +11,7 @@
 .comment-area::-webkit-scrollbar {
   display:none;
 }
-
-//partial
+//partial/comments/index
 .half-right {
   text-align: right;
   width: 93%;
@@ -83,7 +82,7 @@
   margin-top: 1px;
 }
 
-.input-mysize {
+.comment-input {
   height: 35px;
   width: 55%;
   display: inline-block;
