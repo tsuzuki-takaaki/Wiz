@@ -1,12 +1,12 @@
 <div class="top-middle">
 <% posts.each do |post| %>
-  <div class="k-content">
-    <div class="k-head">
+  <div class="c-content">
+    <div class="c-head">
       <div class="top-image">
         <%= image_tag post.image_name1.url if post.image_name1? %>
       </div>
     </div> 
-    <div class="k-middle">
+    <div class="c-middle">
       <div class="top-whole">
         <p class="top-question">country</p>
         <p class="top-answer"><%= post.country %></p>
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="k-foot">
+    <div class="c-foot">
       <p class="more-watch">
         <%= link_to("Read more", post_path(post.id), class: "info-button") %>
       </p>

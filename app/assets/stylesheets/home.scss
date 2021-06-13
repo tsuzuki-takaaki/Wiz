@@ -45,18 +45,18 @@ header {
   width: 100%;
 }
 
-.header-menus {
+.header-menu {
   text-align: right;
 }
 
-.header-menus li {
+.header-menu li {
   display: inline-block;
   margin-right: 30px;
   color: #fff;
   text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
 
-.header-menus a {
+.header-menu a {
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -106,12 +106,12 @@ header {
   width: 100%;
 }
 
-.select-menus li {
+.select-menu li {
   display: inline;
   margin-right: 30px;
 }
 
-.select-menus a {
+.select-menu a {
   color: #fff;
   text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
@@ -124,7 +124,7 @@ header {
   flex-wrap: wrap;
 }
 
-.k-content {
+.c-content {
   width: 23%;
   height: 296px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
@@ -133,7 +133,7 @@ header {
   border-radius: 5px;
 }
 
-.k-head {
+.c-head {
   position: relative;
   height: 145px;
   box-sizing: border-box;
@@ -151,7 +151,7 @@ header {
   border-radius: 5px 5px 0 0;
 }
 
-.k-middle {
+.c-middle {
   height: 98px;
   margin-top: 10px;
   font-size: 13px;
@@ -181,7 +181,7 @@ header {
   font-size: 14px;
 }
 
-.k-foot {
+.c-foot {
   height: 47px;
   width: 100%;
   position: relative;
