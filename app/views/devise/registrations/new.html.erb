@@ -1,6 +1,6 @@
 <% @page_title = "Signup"%>
-<div class="signup-container">
-  <div class="signup-card">
+<div class="user-container">
+  <div class="user-card signup">
     <h2>Sign up</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>

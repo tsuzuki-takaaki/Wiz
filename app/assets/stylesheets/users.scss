@@ -1,10 +1,10 @@
-//login
-.login-container {
+//for devise content
+.user-container {
   height: 100%;
   background-color: #3cad7e;
 }
 
-.login-card {
+.user-card {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,13 +13,21 @@
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
-  height: 60%;
   width: 30%;
   margin: auto;
 }
 
-.login-card h2 {
+.user-card h2 {
   color: #3cad7e;
+}
+
+.other-option a {
+  color: #fab30f;
+  font-weight: bold;
+}
+//login
+.login {
+  height: 60%;
 }
 
 .box input {
@@ -32,13 +40,13 @@
   border-radius: 2px;
 }
 
-input[type="email"], input[type="password"] {
+.box input[type="text"], input[type="email"], input[type="password"] {
   height: 40px;
   border:1px solid #D3D3D3;
   background-color: #fff;
 }
 
-input[type="submit"] {
+.box input[type="submit"] {
   font-weight: bold;
   color: #fff;
   background-color: #0d6efd;
@@ -52,176 +60,127 @@ input[type="submit"] {
   margin-top: 5px;
 }
 
-.without-account {
-  font-size: 14px;
-  font-weight: bold;
+.forgot-password a {
+  color: #0d6efd;
 }
-
-.without-account a {
-  color: #fab30f;
-}
-//remember me if you need to use
-/*<% if devise_mapping.rememberable? %>
-    <div class="remember-me">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-*/
 //signup
-.signup-container {
-  height: 100%;
-  background-color: #3cad7e;
-}
-.signup-card {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px rgba(black, 0.4);
+.signup {
   height: 70%;
-  width: 30%;
-  margin: auto;
 }
-
-.signup-card h2 {
-  color: #3cad7e;
-}
-
-.name input[type="text"] {
-  height: 40px;
-  border:1px solid #D3D3D3;
-  background-color: #fff;
-}
-
-.already-account a {
-  color:  #fab30f;
-  font-weight: bold;
-}
-
 //edit
-.user-edit-container {
-  height: 100%;
-  background-color: #3cad7e;
+.edit {
+  height: 63%;
 }
-
-.user-edit-card {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px rgba(black, 0.4);
-  height: 70%;
-  width: 30%;
-  margin: auto;
-}
-
 //user show
+.for-user a {
+  color: #07f78f;
+  text-shadow: none;
+}
+
 .user-show-container {
   height: 100%;
   width: 100%;
 }
 
-.user-selection {
-  margin: 50px 0 50px 0;
-  font-size: 18px;
-  font-weight: bold;
-  width: 100%;
-}
-
-.user-selection ul {
-  text-align: right;
-}
-
-.user-menus li {
-  display: inline;
-  margin-right: 30px;
-}
-
-.user-menus li:last-child {
-  margin-right: 100px;
-}
-
-.user-menus a {
-  color: dimgray;
-}
-
-.user-logout a {
-  color: red;
-}
-
-.show-head {
+.about-profile {
+  height: 30%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .profile {
-  position: relative;
-  width: 20%;
-  box-sizing: border-box;
+  height: 100%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-.profile-name {
-  position: absolute;
-  top: 80%;
-  right: 13%;
-}
-
-
-.toward-post {
+.profile-left {
   width: 40%;
+  height: 100%;
   box-sizing: border-box;
-  padding-right: 80px;
+  padding-top: 30px;
+  padding-left: 100px;
 }
 
-.user-icon {
-  text-align: right;
+.profile-right {
+  width: 50%;
+  height: 75%;
+  box-sizing: border-box;
+  margin: auto 0;
 }
 
 .user-icon img {
   border: 2px solid black;
   border-radius: 400px;
   box-shadow: 0px 0px 10px #000;
+  height: 100px;
+  width: 100px;
+  vertical-align: bottom;
+}
+
+.profile-name {
+  height: 30%;
+}
+
+.profile-name h3 {
+  margin-top: auto;
+}
+
+.profile-name h5 {
+  margin-top: -20px;
+}
+
+.profile-name a {
+  color: #040dc2;
+}
+
+.profile-right h4 {
+  margin-bottom: -15px;
+  width: 80%;
+}
+
+.profile-right p {
   height: 50%;
-  width: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-post-btn {
+  display: block;
+  height: 50%;
+  width: 80%;
+  padding-top: 11px;
   font-size: 20px;
-  padding: 15px;
-  height: 50px;
   color: #fff;
-  border: 1px solid #66FF99;
+  border: 1px solid #07f78f;
   border-radius: 3px;
-  background: #66FF99;
+  background: #07f78f;
 }
-
 //user-card
 .about-post {
+  height: 60%;
   width: 100%;
-  margin-top: 70px;
-  position: relative;
 }
 
 .posted {
   width: 100%;
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .own-card {
-  width: 18%;
-  margin-right: 100px;
+  width: 23%;
+  height: 296px;
+  border-radius: 5px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  flex-wrap: wrap;
+  margin-right: 40px;
 }
 
 .your-post {
@@ -229,10 +188,11 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  color: #d9d8d7;
 }
 
 .your-post::before, .your-post::after {
-  border-top: 2px solid gray;
+  border-top: 2px solid #d9d8d7;
   content: "";
   flex-grow: 0.3;
 }
@@ -243,4 +203,8 @@ input[type="submit"] {
 
 .your-post::after {
   margin-left: 1rem;
+}
+
+.not-yet {
+  color: #d9d8d7;
 }

@@ -1,29 +1,34 @@
-<div class="user-show-container">
-  <div class="user-selection">
-    <ul class="user-menus">
+<% @page_title = "#{@user.name}'s page"%>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-user">
       <li>
-        <%= link_to("Top", root_path) %>
+        <%= link_to("top", root_path) %>
       </li>
-      <% if user_signed_in? %>
-      <li class="user-logout">
+      <li>
         <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
       </li>
-      <% end %>
     </ul>
   </div>
-  
-  <div class="show-head">
+</header>
+<div class="user-show-container">
+  <div class="about-profile">
     <div class="profile">
-      <div class="user-icon">
-        <%= image_tag "/hukumen.jpeg" %>
+      <div class="profile-left">
+        <div class="user-icon">
+          <%= image_tag "/hukumen.jpeg" %>
+        </div>
+        <div class="profile-name">
+          <h3><%= @user.name %></h3>
+          <h5><%= link_to("Edit", edit_user_registration_path) %></h5>
+        </div>
       </div>
-      <div class="profile-name">
-        <h3><%= @user.name %></h3>
+      <div class="profile-right">
+        <h4>please share your story!</h4>
+        <p>
+          <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
+        </p>
       </div>
-    </div>
-    <div class="toward-post">
-      <h2>please share your story!</h2>
-      <%= link_to("New Post", new_post_path, class: "new-post-btn") %>
     </div>
   </div>
   <div class="about-post">
@@ -32,22 +37,33 @@
       <div class="posted">
         <% @posts.each do |post| %>
           <div class="own-card">
-            <div class="k-head">
-              <%= image_tag post.image_name1.url if post.image_name1? %>
-              <div class="k-name">
-                <h3>@<%= post.user.name %></h3>
+            <div class="c-head">
+              <div class="top-image">
+                <%= image_tag post.image_name1.url if post.image_name1? %>
               </div>
             </div> 
-            <div class="k-middle">
-              <ul class="personal">
-                <li>国:<%= post.country %></li>
-                <li>地域:<%= post.city %></li>
-                <li>期間:<%= post.howlong %></li>
-                <li>費用:<%= post.money %></li>
-              </ul>
+            <div class="c-middle">
+              <div class="top-whole">
+                <p class="top-question">country</p>
+                <p class="top-answer"><%= post.country %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">city</p>
+                <p class="top-answer"><%= post.city %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">period</p>
+                <p class="top-answer"><%= post.howlong %></p>
+              </div>
+              <div class="top-whole">
+                <p class="top-question">cost</p>
+                <p class="top-answer"><%= post.money %></p>
+              </div>
             </div>
-            <div class="k-foot">
-              <%= link_to("MoreInformation", post_path(post.id), class: "info-button") %>
+            <div class="c-foot">
+              <p class="more-watch">
+                <%= link_to("Read more", post_path(post.id), class: "info-button") %>
+              </p>
             </div>
           </div>
         <% end %>
@@ -58,6 +74,5 @@
       </div>
     <% end %>
   </div>
-</div>
 
-<%= link_to("Edit", edit_user_registration_path) %>
+</div>

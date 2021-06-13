@@ -1,5 +1,28 @@
-<div class="post-show">
-
+<% @page_title = "post by #{@post.user.name}" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-post">
+      <li>
+        <%= link_to("top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="post-container">
   <div class="post-card">
     <div class="post-image">
       <%= image_tag @post.image_name1.url if @post.image_name1? %>
@@ -40,17 +63,16 @@
         <% if current_user && @post.user_id == current_user.id %>
         <div class="can-manipulate">
           <div class="post-edit">
-            <%= link_to("編集", edit_post_path) %>
-          </div>
-          <div class="post-delete">
-            <%= link_to("削除", post_path, {method:"delete"}) %>
+            <%= link_to("Edit", edit_post_path) %>
           </div>
         </div>
         <% end %>
     </div>
   </div>
-
   <div class="comment-field">
+    <div class="post-by">
+      <h2>Posted by <span><%= @post.user.name %></span></h2>
+    </div>
     <p class="comment-title">Questions</p>
     <div class="comment-area">
       <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
@@ -59,5 +81,4 @@
       <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
     </div>
   </div>
-
 </div>

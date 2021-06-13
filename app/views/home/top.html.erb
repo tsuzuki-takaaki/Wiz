@@ -1,7 +1,7 @@
 <% @page_title = "留学用掲示板" %>
 <header>
   <div class="header-logo">
-    <ul class="header-menus">
+    <ul class="header-menu">
     <% if user_signed_in? %>
       <li>
         <%= link_to(current_user.name, user_path(current_user.id)) %>
@@ -23,7 +23,7 @@
   <h1>Wiz</h1>
 </div>
 <div class="selection">
-  <ul class="select-menus">
+  <ul class="select-menu">
     <li>
       <%= link_to("ALL", root_path) %>
     </li>

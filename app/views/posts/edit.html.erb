@@ -1,20 +1,67 @@
-<div class="main posts-new">
-  <div class="container">
-    <h1 class="form-heading">編集する</h1>
+<% @page_title = "Post Edit" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-post">
+      <li>
+        <%= link_to("top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="post-container">
     <%= form_with model: @post do |f| %>
-      <div class="form">
-        <div class="form-body">
-          <%= f.text_field :country, value: @post.country %>
-          <%= f.text_field :city, value: @post.city %>
-          <%= f.text_field :howlong, value: @post.howlong %>
-          <%= f.text_field :visa, value: @post.visa %>
-          <%= f.text_field :money, value: @post.money %>
-          <%= f.text_field :schoolname, value: @post.schoolname %>
-          <%= f.text_field :agent, value: @post.agent %>
-          <%= f.text_field :necessity, value: @post.necessity %>
-          <%= f.submit "保存" %>
+    <h1 class="form-heading">Post Edit</h1>
+    <div class="form-content">
+      <div class="edit-photo">
+        <%= image_tag @post.image_name1.url if @post.image_name1? %>
+        <%= f.file_field :image_name1, class: "image" %>
+      </div>
+      <div class="without-photo">
+        <div class="county form">
+          <%= f.select :country, [["USA", "USA"], ["UK", "UK"], ["Canada", "Canada"], ["Australia", "Australia"], ["NewZealand", "Newzealand"], ["SouthAfrica", "SouthAfrica"], ["Malta", "Malta"], ["thePhilippines", "thePhilippines"]] %>
+        </div>
+        <div class="city form">
+          <%= f.text_field :city, placeholder: "地域" %>
+        </div>
+        <div class="howlong form">
+          <%= f.text_field :howlong, placeholder: "期間" %>
+        </div>
+        <div class="visa form">
+          <%= f.text_field :visa, placeholder: "ビザの種類" %>
+        </div>
+        <div class="money form">
+          <%= f.text_field :money, placeholder: "費用" %>
+        </div>
+        <div class="school form">
+          <%= f.text_field :schoolname, placeholder: "学校名" %>
+        </div>
+        <div class="agent form">
+          <%= f.text_field :agent, placeholder: "エージェント" %>
+        </div>
+        <div class="necessity form">
+            <%= f.text_field :necessity, placeholder: "必需品" %>
         </div>
       </div>
+      <div class="submit">
+        <%= f.submit "Share", class:"submit-form"%>
+      </div>
+    </div>
     <% end %>
-  </div>
+    <div class="post-delete">
+      <%= link_to("delete post", post_path, {method:"delete", data: { confirm: "削除しますか？"}}) %>
+    </div>
 </div>

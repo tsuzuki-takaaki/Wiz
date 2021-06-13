@@ -1,3 +1,108 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//comment-field
+.comment-area {
+  height: 90%;
+  width: 100%;
+  overflow: scroll;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  background-color: #fff;
+}
+
+.comment-area::-webkit-scrollbar {
+  display:none;
+}
+//partial/comments/index
+.half-right {
+  text-align: right;
+  width: 93%;
+}
+
+.half-left {
+  text-align: left;
+  width: 93%;
+}
+
+.comment-box {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  width: 35%;
+  border-radius: 10px;
+  color: #1a091a;
+  background: #aff283;
+  margin-top: 50px;
+  font-size: 11px;
+}
+
+.right {
+  left: 0;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #aff283;
+}
+
+.left {
+  left: 5%;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -25%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #aff283;
+}
+
+.comment-username {
+  text-align: right;
+  font-weight: bold;
+  margin-top: -13px;
+}
+
+.comment-content {
+  font-size: 13px;
+  margin: 25px 0 25px 0;
+}
+
+.comment-time {
+  text-align: right;
+  margin-bottom: -13px;
+}
+
+.comment-form {
+  margin-top: 1px;
+}
+
+.comment-input {
+  height: 35px;
+  width: 55%;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+	border-right: none;
+}
+
+.send-btn {
+  height: 35px;
+  display: inline-block;
+  font-size: 100%;
+  padding: 8px 20px;
+  margin-left: -6px;
+  color: #fff;
+  background-color: #000077;
+  vertical-align: top;
+  border: none;
+	border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}

@@ -1,5 +1,4 @@
 //for all
-//#3cad7e
 * {
   text-align: center;
 }
@@ -7,6 +6,7 @@
 html, body {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 ul, li {
@@ -19,10 +19,10 @@ a {
 
 footer {
   position: absolute;
-  top: 1400px;
+  top: 1790px;
   height: 200px;
   width: 100%;
-  background-color: dimgray;
+  background-color: rgba(73,71,77,0.7);
 }
 //flash
 .flash {
@@ -45,25 +45,23 @@ header {
   width: 100%;
 }
 
-.header-menus {
+.header-menu {
   text-align: right;
 }
 
-.header-menus li {
+.header-menu li {
   display: inline-block;
   margin-right: 30px;
   color: #fff;
   text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
 
-.header-menus a {
+.header-menu a {
   color: white;
   font-weight: bold;
   font-size: 18px;
 }
-
 //top
-
 .top-main {
   padding: 200px 0 100px 0;
   text-align: center;
@@ -108,16 +106,15 @@ header {
   width: 100%;
 }
 
-.select-menus li {
+.select-menu li {
   display: inline;
   margin-right: 30px;
 }
 
-.select-menus a {
+.select-menu a {
   color: #fff;
   text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
-
 //card-index
 .top-middle {
   position: absolute;
@@ -125,18 +122,18 @@ header {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.k-content {
+.c-content {
   width: 23%;
   height: 296px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   margin-top: 30px;
+  margin-left: 19px;
   border-radius: 5px;
 }
 
-.k-head {
+.c-head {
   position: relative;
   height: 145px;
   box-sizing: border-box;
@@ -154,7 +151,7 @@ header {
   border-radius: 5px 5px 0 0;
 }
 
-.k-middle {
+.c-middle {
   height: 98px;
   margin-top: 10px;
   font-size: 13px;
@@ -170,6 +167,7 @@ header {
   border-bottom: 1px solid #cccccc;
   box-sizing: border-box;
   align-items: center;
+  padding-top: 4px;
 }
 
 .top-question {
@@ -183,7 +181,7 @@ header {
   font-size: 14px;
 }
 
-.k-foot {
+.c-foot {
   height: 47px;
   width: 100%;
   position: relative;
@@ -197,7 +195,6 @@ header {
   height: 100%;
   width: 100%;
 }
-
 
 .info-button {
   display: inline-block;

@@ -1,5 +1,28 @@
-<% @page_title = "NewPost"%>
-<div class="post-new-container">
+<% @page_title = "New Post"%>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-post">
+      <li>
+        <%= link_to("top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="post-container">
     <%= form_with model: @post do |f| %>
     <div class="form-content">
       <div class="post-photo">
