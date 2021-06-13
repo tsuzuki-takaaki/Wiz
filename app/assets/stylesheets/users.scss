@@ -1,10 +1,10 @@
-//login
-.login-container {
+//for devise content
+.user-container {
   height: 100%;
   background-color: #3cad7e;
 }
 
-.login-card {
+.user-card {
   position: absolute;
   top: 0;
   right: 0;
@@ -13,13 +13,21 @@
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
-  height: 60%;
   width: 30%;
   margin: auto;
 }
 
-.login-card h2 {
+.user-card h2 {
   color: #3cad7e;
+}
+
+.other-option a {
+  color: #fab30f;
+  font-weight: bold;
+}
+//login
+.login {
+  height: 60%;
 }
 
 .box input {
@@ -32,13 +40,13 @@
   border-radius: 2px;
 }
 
-input[type="email"], input[type="password"] {
+.box input[type="text"], input[type="email"], input[type="password"] {
   height: 40px;
   border:1px solid #D3D3D3;
   background-color: #fff;
 }
 
-input[type="submit"] {
+.box input[type="submit"] {
   font-weight: bold;
   color: #fff;
   background-color: #0d6efd;
@@ -52,73 +60,16 @@ input[type="submit"] {
   margin-top: 5px;
 }
 
-.without-account {
-  font-size: 14px;
-  font-weight: bold;
+.forgot-password a {
+  color: #0d6efd;
 }
-
-.without-account a {
-  color: #fab30f;
-}
-//remember me if you need to use
-/*<% if devise_mapping.rememberable? %>
-    <div class="remember-me">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-*/
 //signup
-.signup-container {
-  height: 100%;
-  background-color: #3cad7e;
-}
-.signup-card {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px rgba(black, 0.4);
+.signup {
   height: 70%;
-  width: 30%;
-  margin: auto;
-}
-
-.signup-card h2 {
-  color: #3cad7e;
-}
-
-.name input[type="text"] {
-  height: 40px;
-  border:1px solid #D3D3D3;
-  background-color: #fff;
-}
-
-.already-account a {
-  color:  #fab30f;
-  font-weight: bold;
 }
 //edit
-.user-edit-container {
-  height: 100%;
-  background-color: #3cad7e;
-}
-
-.user-edit-card {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px rgba(black, 0.4);
+.edit {
   height: 63%;
-  width: 30%;
-  margin: auto;
 }
 //user show
 .for-user a {
