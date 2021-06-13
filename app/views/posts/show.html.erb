@@ -22,7 +22,7 @@
     </ul>
   </div>
 </header>
-<div class="post-show-container">
+<div class="post-container">
   <div class="post-card">
     <div class="post-image">
       <%= image_tag @post.image_name1.url if @post.image_name1? %>
@@ -69,9 +69,8 @@
         <% end %>
     </div>
   </div>
-
   <div class="comment-field">
-    <div class="show-title">
+    <div class="post-by">
       <h2>Posted by <span><%= @post.user.name %></span></h2>
     </div>
     <p class="comment-title">Questions</p>
@@ -82,5 +81,4 @@
       <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
     </div>
   </div>
-
 </div>

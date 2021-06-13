@@ -4,7 +4,7 @@
   text-shadow: none;
 }
 
-.post-show-container {
+.post-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -83,14 +83,6 @@
   margin-bottom: 0;
 }
 //post-new
-.post-new-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(#f68084,#a6c0fe);
-}
-
 .form-content {
   position: absolute;
   top: 0;
@@ -195,12 +187,6 @@
   background    : #ffffff;
 }
 //post edit
-.post-edit-container {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#f68084,#a6c0fe);
-}
-
 .form-heading {
   margin: 0;
   padding-top: 20px;
