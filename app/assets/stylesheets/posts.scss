@@ -67,6 +67,7 @@
 
 .post-edit a {
   color: #aff283;
+  font-weight: bold;
 }
 
 .comment-field {
@@ -127,15 +128,11 @@
   display: inline-block;
   padding: 2px 1em;
   position: relative;
-  background-color:#f6f6f6;
 }
 
-.post-photo span {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  font-size: 15px;
-  color: #C0C0C0;
+.post-photo img {
+  height: 100%;
+  width: 100%;
 }
 
 .post-photo input[type="file"] {
@@ -157,34 +154,21 @@
 .submit {
   width: 50%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .submit input {
   height: auto;
+  color: #fff;
+  background-color: #0d6efd;
+  cursor: pointer;
 }
 
 .submit-form {
   display       : inline-block;
-  height: auto;
-  width: 50%;
-  border-radius : 6%;
   font-size     : 17pt;
   text-align    : center;
-  cursor        : pointer;
   padding       : 15px 48px;
-  background    : #000066;
-  color         : #ffffff;
-  line-height   : 1em;
-  transition    : .3s;
-  box-shadow    : 6px 6px 3px #666666;
-  border        : 2px solid #000066;
-  margin-top: 20px;
-}
-
-.submit-form:hover {
-  box-shadow    : none;
-  color         : #000066;
-  background    : #ffffff;
 }
 //post edit
 .form-heading {

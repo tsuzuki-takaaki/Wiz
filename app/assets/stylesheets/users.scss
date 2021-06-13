@@ -25,6 +25,11 @@
   color: #fab30f;
   font-weight: bold;
 }
+//devise error
+#error_explanation h2, li {
+  margin: 0;
+  color: red;
+}
 //login
 .login {
   height: 60%;

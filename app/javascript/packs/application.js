@@ -13,3 +13,4 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require("jquery")
+require("for_image.js")
