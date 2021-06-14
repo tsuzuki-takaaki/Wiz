@@ -26,7 +26,7 @@
     <%= form_with model: @post do |f| %>
     <h1 class="form-heading">Post Edit</h1>
     <div class="form-content">
-      <div class="edit-photo">
+      <div class="post-photo">
         <%= image_tag @post.image_name1.url, id: "preview" %>
         <%= f.file_field :image_name1, id: "post_image" %>
       </div>
