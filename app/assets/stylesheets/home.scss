@@ -26,16 +26,28 @@ footer {
 }
 //flash
 .flash {
-  color: white;
-  text-align: center;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  width: 150px;
+  z-index: 10;
+  padding: 20px 0;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  color: #fff;
+  background-color: #fa5277;
+  font-weight: bold;
 }
 
-.flash_notice {
-  background-color: blue;
-}
-
-.flash_alert {
-  background-color: red;
+.flash::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 95%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #fa5277;
 }
 // header
 header {
