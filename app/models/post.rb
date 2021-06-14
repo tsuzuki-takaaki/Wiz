@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-
   belongs_to :user
   has_many :comments, dependent: :destroy
 
@@ -7,7 +6,9 @@ class Post < ApplicationRecord
 
   validates :country, {presence:true}
   validates :howlong, {presence:true}
-  validates :visa, {presence:true}
   validates :schoolname, {presence:true}
+  validates :city, {presence:true}
+  validates :money, {presence:true}
+  validates :image_name1, {presence:true}
   validates :user_id, {presence:true}
 end

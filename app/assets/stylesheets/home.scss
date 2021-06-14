@@ -26,16 +26,28 @@ footer {
 }
 //flash
 .flash {
-  color: white;
-  text-align: center;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  width: 150px;
+  z-index: 10;
+  padding: 20px 0;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  color: #fff;
+  background-color: #fa5277;
+  font-weight: bold;
 }
 
-.flash_notice {
-  background-color: blue;
-}
-
-.flash_alert {
-  background-color: red;
+.flash::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 95%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #fa5277;
 }
 // header
 header {
@@ -53,7 +65,6 @@ header {
   display: inline-block;
   margin-right: 30px;
   color: #fff;
-  text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
 
 .header-menu a {
@@ -82,24 +93,14 @@ header {
   margin: 0 auto;
   box-sizing: border-box;
   color: #fff;
-  text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
-  border: 2px solid #b5f7dc;
-  box-shadow: 
-    0 1px 2px #001f12, 
-    2px 1px 4px #154531, 
-    2px 4px 3px #348060, 
-    0 0 7px 2px #b5f7dc,
-    inset 0 1px 2px #001f12, 
-    inset 2px 1px 4px #154531, 
-    inset 2px 4px 3px #348060, 
-    inset 0 0 7px 2px #b5f7dc;
-  border-radius: 6px;
+  border: 4px solid #fff;
+  border-radius: 30px;
   cursor: pointer;
 }
 
 .selection {
   position: absolute;
-  top: 400px;
+  top: 415px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -113,7 +114,6 @@ header {
 
 .select-menu a {
   color: #fff;
-  text-shadow: 0 0 1px #fff, 0 0 20px #0cc, 0 0 10px #0cc, 0 0 10px #0ff, 0 0 60px #0ff;
 }
 //card-index
 .top-middle {
