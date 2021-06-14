@@ -20,7 +20,9 @@
         </div>
         <div class="profile-name">
           <h3><%= @user.name %></h3>
+          <% if current_user.id == @user.id %>
           <h5><%= link_to("Edit", edit_user_registration_path) %></h5>
+          <% end %>
         </div>
       </div>
       <div class="profile-right">
