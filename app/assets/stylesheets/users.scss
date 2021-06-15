@@ -15,10 +15,9 @@
   box-shadow: 0 10px 20px rgba(black, 0.4);
   width: 30%;
   margin: auto;
-}
-
-.user-card h2 {
-  color: #3cad7e;
+  h2 {
+    color: #3cad7e;
+  }
 }
 
 .other-option a {
@@ -63,10 +62,9 @@
   font-size: 14px;
   margin: 0 0 0 auto;
   margin-top: 5px;
-}
-
-.forgot-password a {
-  color: #0d6efd;
+  a {
+    color: #0d6efd;
+  }
 }
 //signup
 .signup {
@@ -100,21 +98,30 @@
   display: flex;
   justify-content: center;
   margin-top: 25px;
-}
-
-.profile-left {
-  width: 40%;
-  height: 100%;
-  box-sizing: border-box;
-  padding-top: 30px;
-  padding-left: 100px;
-}
-
-.profile-right {
-  width: 50%;
-  height: 75%;
-  box-sizing: border-box;
-  margin: auto 0;
+  .profile-left {
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-left: 100px;
+  }
+  .profile-right {
+    width: 50%;
+    height: 75%;
+    box-sizing: border-box;
+    margin: auto 0;
+    h4 {
+      margin-bottom: -15px;
+      width: 80%;
+    }
+    p {
+      height: 50%;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .user-icon img {
@@ -126,31 +133,15 @@
 
 .profile-name {
   height: 30%;
-}
-
-.profile-name h3 {
-  margin-top: auto;
-}
-
-.profile-name h5 {
-  margin-top: -20px;
-}
-
-.profile-name a {
-  color: #040dc2;
-}
-
-.profile-right h4 {
-  margin-bottom: -15px;
-  width: 80%;
-}
-
-.profile-right p {
-  height: 50%;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  h3 {
+    margin-top: auto;
+  }
+  h5 {
+    margin-top: -20px;
+  }
+  a {
+    color: #040dc2;
+  }
 }
 
 .new-post-btn {

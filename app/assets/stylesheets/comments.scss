@@ -6,10 +6,9 @@
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   background-color: #fff;
-}
-
-.comment-area::-webkit-scrollbar {
-  display:none;
+  &::-webkit-scrollbar {
+    display:none;
+  }
 }
 //partial/comments/index
 .half-right {
@@ -35,31 +34,29 @@
 }
 
 .right {
-  left: 0;
-}
-
-.right::before {
-  content: "";
-  position: absolute;
-  top: 60%;
-  left: 100%;
-  margin-top: -15px;
-  border: 15px solid transparent;
-  border-left: 15px solid #aff283;
+  left: 3%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-left: 15px solid #aff283;
+  }
 }
 
 .left {
   left: 5%;
-}
-
-.left::before {
-  content: "";
-  position: absolute;
-  top: 60%;
-  left: -25%;
-  margin-top: -15px;
-  border: 15px solid transparent;
-  border-right: 15px solid #aff283;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: -25%;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #aff283;
+  }
 }
 
 .comment-username {
