@@ -25,12 +25,11 @@
 .post-image {
   height: 41%;
   box-sizing: border-box;
-}
-
-.post-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px 5px 0 0;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+  }
 }
 
 .post-content {
@@ -46,16 +45,14 @@
   border-bottom: 1px solid #cccccc;
   justify-content: space-between;
   box-sizing: border-box;
-}
-
-.question-content {
-  color: #cccccc;
-}
-
-.answer-content {
-  height: 100%;
-  width: 65%;
-  font-weight: bold;
+  .question-content {
+    color: #cccccc;
+  }
+  .answer-content {
+    height: 100%;
+    width: 65%;
+    font-weight: bold;
+  }
 }
 
 .can-manipulate {
@@ -63,11 +60,10 @@
   position: relative;
   left: 370px;
   bottom: 7px;
-}
-
-.post-edit a {
-  color: #aff283;
-  font-weight: bold;
+  .post-edit a {
+    color: #aff283;
+    font-weight: bold;
+  }
 }
 
 .comment-field {
@@ -102,23 +98,21 @@
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(black, 0.4);
-}
-
-.form-content input {
-  height: 30px;
-  width: 100%;
-  border: none;
-  border-radius: 3px;
-  border:1px solid #D3D3D3;
-  background-color: #fff;
-}
-
-.form-content select {
-  height: 30px;
-  width: 100%;
-  border-radius: 3px;
-  text-align: center;
-  cursor: pointer;
+  input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    border:1px solid #D3D3D3;
+    background-color: #fff;
+  }
+  select {
+    height: 30px;
+    width: 100%;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+  }
 }
 
 .form {
@@ -132,22 +126,20 @@
   width: 100%;
   display: inline-block;
   position: relative;
-}
-
-.post-photo img {
-  height: 100%;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
-
-.post-photo input[type="file"] {
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  input[type="file"] {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+  }
 }
 
 .without-photo {
@@ -160,13 +152,12 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 20px;
-}
-
-.submit input {
-  height: auto;
-  color: #fff;
-  background-color: #0d6efd;
-  cursor: pointer;
+  input {
+    height: auto;
+    color: #fff;
+    background-color: #0d6efd;
+    cursor: pointer;
+  }
 }
 
 .submit-form {
@@ -180,8 +171,7 @@
   position: absolute;
   top: 89%;
   left: 63%;
-}
-
-.post-delete a {
-  color: #fff;
+  a {
+    color: #fff;
+  }
 }
