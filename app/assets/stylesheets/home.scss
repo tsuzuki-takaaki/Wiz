@@ -108,6 +108,7 @@ footer {
   margin-bottom: 30px;
 }
 $sp: 420px;
+$tb: 1024px;
 //card-index
 .top-middle {
   width: 100%;
@@ -115,9 +116,6 @@ $sp: 420px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  @media only screen and (max-width: 450px) {
-    justify-content: center;
-  }
 }
 
 .c-content {
@@ -126,6 +124,12 @@ $sp: 420px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   margin-top: 30px;
   border-radius: 5px;
+  @media only screen and (max-width: $tb) {
+    width: 31%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 45%;
+  }
   @media only screen and (max-width: $sp) {
     width: 78%;
     height: 46vh;
