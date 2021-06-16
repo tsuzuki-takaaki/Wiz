@@ -1,4 +1,7 @@
 //for all
+$sp: 428px;
+$tb: 1024px;
+
 * {
   text-align: center;
 }
@@ -75,6 +78,7 @@ footer {
   height: 200px;
   background: #3cad7e;
   background-size: cover;
+  position: relative;
   h1 {
     width: 175px;
     padding-top: 4px;
@@ -87,12 +91,12 @@ footer {
 }
 
 .selection {
+  width: 100%;
   position: absolute;
-  top: 415px;
+  bottom: 15px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  width: 100%;
   .select-menu {
     li {
       display: inline;
@@ -107,8 +111,7 @@ footer {
 .card-field {
   margin-bottom: 30px;
 }
-$sp: 420px;
-$tb: 1024px;
+
 //card-index
 .top-middle {
   width: 100%;
