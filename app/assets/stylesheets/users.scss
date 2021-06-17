@@ -123,9 +123,11 @@ $tb: 1024px;
   }
 }
 //user show
-.for-user a {
-  color: #07f78f;
-  text-shadow: none;
+.for-user li {
+  a {
+    color: #07f78f;
+    text-shadow: none;
+  }
 }
 
 .user-show-container {
