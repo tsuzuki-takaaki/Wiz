@@ -1,7 +1,16 @@
 //for devise content
+$sp: 428px;
+$tb: 1024px;
+
 .user-container {
   height: 100%;
   background-color: #3cad7e;
+}
+
+//devise error
+#error_explanation h2, li {
+  margin: 0;
+  color: red;
 }
 
 .user-card {
@@ -18,20 +27,17 @@
   h2 {
     color: #3cad7e;
   }
+  @media only screen and (max-width: $tb) {
+    width: 62%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 85%;
+  }
 }
 
 .other-option a {
   color: #fab30f;
   font-weight: bold;
-}
-//devise error
-#error_explanation h2, li {
-  margin: 0;
-  color: red;
-}
-//login
-.login {
-  height: 60%;
 }
 
 .box input {
@@ -69,7 +75,25 @@
 //signup
 .signup {
   height: 70%;
+  @media only screen and (max-height: 640px) {
+    height: 80%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 60%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 50%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 45%;
+  }
 }
+
+//login
+.login {
+  height: 60%;
+}
+
 //edit
 .edit {
   height: 63%;
