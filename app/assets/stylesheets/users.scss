@@ -92,11 +92,35 @@ $tb: 1024px;
 //login
 .login {
   height: 60%;
+  @media only screen and (max-height: 640px) {
+    height: 70%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 50%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 40%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 35%;
+  }
 }
 
 //edit
 .edit {
   height: 63%;
+  @media only screen and (max-height: 640px) {
+    height: 73%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 53%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 43%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 38%;
+  }
 }
 //user show
 .for-user a {
