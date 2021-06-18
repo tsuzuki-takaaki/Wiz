@@ -136,21 +136,37 @@ $tb: 1024px;
 }
 
 .about-profile {
-  height: 30%;
+  height: 25%;
   width: 100%;
   display: flex;
   justify-content: center;
+  @media only screen and (min-height: 900px) {
+    height: 20%;
+  }
 }
 
 .profile {
   height: 100%;
   width: 50%;
+  margin-top: 15px;
+  margin-left: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: $tb) {
+    width: 70%;
+    margin-top: 25px;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 100%;
+  }
   .profile-left {
     width: 25%;
-    height: 75%;
+    height: 68%;
+    max-height: 68%;
     box-sizing: border-box;
     .user-icon img {
       border-radius: 400px;
@@ -172,8 +188,9 @@ $tb: 1024px;
     }
   }
   .profile-right {
-    width: 60%;
-    height: 65%;
+    width: 70%;
+    height: 70%;
+    max-height: 70%;
     box-sizing: border-box;
     h4 {
       width: 80%;
@@ -181,7 +198,8 @@ $tb: 1024px;
     p {
       height: 50%;
       width: 80%;
-      margin-left: 25px;
+      max-width: 80%;
+      margin-left: 12%;
     }
   }
 }
@@ -189,7 +207,7 @@ $tb: 1024px;
 .new-post-btn {
   display: block;
   height: 50%;
-  width: 80%;
+  width: 70%;
   padding:10px 0;
   font-size: 20px;
   color: #fff;
@@ -198,10 +216,30 @@ $tb: 1024px;
   background: #07f78f;
 }
 
+.your-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d9d8d7;
+}
 
+.your-post::before, .your-post::after {
+  border-top: 2px solid #d9d8d7;
+  content: "";
+  flex-grow: 0.3;
+}
 
+.your-post::before {
+  margin-right: 1rem;
+}
 
+.your-post::after {
+  margin-left: 1rem;
+}
 
+.not-yet {
+  color: #d9d8d7;
+}
 //user-card
 .about-post {
   height: 60%;
@@ -234,29 +272,4 @@ $tb: 1024px;
     width: 78%;
     height: 46vh;
   }
-}
-
-.your-post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #d9d8d7;
-}
-
-.your-post::before, .your-post::after {
-  border-top: 2px solid #d9d8d7;
-  content: "";
-  flex-grow: 0.3;
-}
-
-.your-post::before {
-  margin-right: 1rem;
-}
-
-.your-post::after {
-  margin-left: 1rem;
-}
-
-.not-yet {
-  color: #d9d8d7;
 }
