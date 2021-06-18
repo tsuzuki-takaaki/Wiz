@@ -1,7 +1,16 @@
 //for devise content
+$sp: 428px;
+$tb: 1024px;
+
 .user-container {
   height: 100%;
   background-color: #3cad7e;
+}
+
+//devise error
+#error_explanation h2, li {
+  margin: 0;
+  color: red;
 }
 
 .user-card {
@@ -18,20 +27,17 @@
   h2 {
     color: #3cad7e;
   }
+  @media only screen and (max-width: $tb) {
+    width: 62%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 85%;
+  }
 }
 
 .other-option a {
   color: #fab30f;
   font-weight: bold;
-}
-//devise error
-#error_explanation h2, li {
-  margin: 0;
-  color: red;
-}
-//login
-.login {
-  height: 60%;
 }
 
 .box input {
@@ -69,15 +75,59 @@
 //signup
 .signup {
   height: 70%;
+  @media only screen and (max-height: 640px) {
+    height: 80%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 60%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 50%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 45%;
+  }
 }
+
+//login
+.login {
+  height: 60%;
+  @media only screen and (max-height: 640px) {
+    height: 70%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 50%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 40%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 35%;
+  }
+}
+
 //edit
 .edit {
   height: 63%;
+  @media only screen and (max-height: 640px) {
+    height: 73%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 53%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 43%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 38%;
+  }
 }
 //user show
-.for-user a {
-  color: #07f78f;
-  text-shadow: none;
+.for-user li {
+  a {
+    color: #07f78f;
+    text-shadow: none;
+  }
 }
 
 .user-show-container {
@@ -86,74 +136,109 @@
 }
 
 .about-profile {
-  height: 30%;
+  height: 25%;
   width: 100%;
   display: flex;
   justify-content: center;
+  @media only screen and (min-height: 900px) {
+    height: 20%;
+  }
 }
 
 .profile {
   height: 100%;
-  width: 55%;
+  width: 50%;
+  margin-top: 15px;
+  margin-left: 2%;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  @media only screen and (max-width: $tb) {
+    width: 70%;
+    margin-top: 25px;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 100%;
+  }
   .profile-left {
-    width: 40%;
-    height: 100%;
+    width: 25%;
+    height: 68%;
+    max-height: 68%;
     box-sizing: border-box;
-    padding-top: 30px;
-    padding-left: 100px;
+    .user-icon img {
+      border-radius: 400px;
+      height: 63%;
+      width: 75%;
+      vertical-align: bottom;
+    }
+    .profile-name {
+      height: 30%;
+      h3 {
+        margin-top: auto;
+      }
+      h5 {
+        margin-top: -20px;
+      }
+      a {
+        color: #040dc2;
+      }
+    }
   }
   .profile-right {
-    width: 50%;
-    height: 75%;
+    width: 70%;
+    height: 70%;
+    max-height: 70%;
     box-sizing: border-box;
-    margin: auto 0;
     h4 {
-      margin-bottom: -15px;
       width: 80%;
     }
     p {
       height: 50%;
       width: 80%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      max-width: 80%;
+      margin-left: 12%;
     }
-  }
-}
-
-.user-icon img {
-  border-radius: 400px;
-  height: 100px;
-  width: 100px;
-  vertical-align: bottom;
-}
-
-.profile-name {
-  height: 30%;
-  h3 {
-    margin-top: auto;
-  }
-  h5 {
-    margin-top: -20px;
-  }
-  a {
-    color: #040dc2;
   }
 }
 
 .new-post-btn {
   display: block;
   height: 50%;
-  width: 80%;
-  padding-top: 11px;
+  width: 70%;
+  padding:10px 0;
   font-size: 20px;
   color: #fff;
   border: 1px solid #07f78f;
   border-radius: 3px;
   background: #07f78f;
+}
+
+.your-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d9d8d7;
+}
+
+.your-post::before, .your-post::after {
+  border-top: 2px solid #d9d8d7;
+  content: "";
+  flex-grow: 0.3;
+}
+
+.your-post::before {
+  margin-right: 1rem;
+}
+
+.your-post::after {
+  margin-left: 1rem;
+}
+
+.not-yet {
+  color: #d9d8d7;
 }
 //user-card
 .about-post {
@@ -174,31 +259,17 @@
   height: 296px;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  margin-right: 40px;
-}
-
-.your-post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  color: #d9d8d7;
-}
-
-.your-post::before, .your-post::after {
-  border-top: 2px solid #d9d8d7;
-  content: "";
-  flex-grow: 0.3;
-}
-
-.your-post::before {
-  margin-right: 1rem;
-}
-
-.your-post::after {
-  margin-left: 1rem;
-}
-
-.not-yet {
-  color: #d9d8d7;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  @media only screen and (max-width: $tb) {
+    width: 31%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 78%;
+    height: 46vh;
+  }
 }

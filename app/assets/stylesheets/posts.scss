@@ -1,3 +1,5 @@
+$sp: 428px;
+$tb: 1024px;
 //show
 .for-post li {
   color: #fff;
@@ -80,12 +82,6 @@
   margin-bottom: 0;
 }
 //post-new
-.form-heading {
-  margin: 0;
-  padding-top: 30px;
-  color: #fff;
-}
-
 .form-content {
   position: absolute;
   top: 0;
@@ -93,7 +89,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 420px;
+  width: 37%;
   height: 75%;
   border-radius: 5px;
   background-color: #fff;
@@ -112,6 +108,27 @@
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
+  }
+  @media only screen and (max-width: $tb) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 75%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 90%;
+  }
+  @media only screen and (max-height: 670px) {
+    height: 80%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 65%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 55%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 50%;
   }
 }
 
@@ -173,5 +190,17 @@
   left: 63%;
   a {
     color: #fff;
+  }
+  @media only screen and (max-height: 670px) {
+    top: 90%;
+  }
+  @media only screen and (min-height: 800px) {
+    top: 84%;
+  }
+  @media only screen and (min-height: 1000px) {
+    top: 78%;
+  }
+  @media only screen and (min-height: 1100px) {
+    top: 75%;
   }
 }

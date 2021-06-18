@@ -1,4 +1,7 @@
 //for all
+$sp: 428px;
+$tb: 1024px;
+
 * {
   text-align: center;
 }
@@ -17,9 +20,27 @@ a {
   text-decoration: none;
 }
 
-footer {
+header {
+  height: 64px;
   position: absolute;
-  top: 1790px;
+  z-index: 1;
+  width: 100%;
+  .header-menu {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin-right: 30px;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+
+footer {
   height: 200px;
   width: 100%;
   background-color: rgba(73,71,77,0.7);
@@ -50,27 +71,6 @@ footer {
   }
 }
 
-// header
-header {
-  height: 64px;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  .header-menu {
-    text-align: right;
-    li {
-      display: inline-block;
-      margin-right: 30px;
-      color: #fff;
-    }
-    a {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-  }
-}
-
 //top
 .top-main {
   padding: 200px 0 100px 0;
@@ -78,8 +78,9 @@ header {
   height: 200px;
   background: #3cad7e;
   background-size: cover;
+  position: relative;
   h1 {
-    width: 15%;
+    width: 175px;
     padding-top: 4px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -90,12 +91,12 @@ header {
 }
 
 .selection {
+  width: 100%;
   position: absolute;
-  top: 415px;
+  bottom: 15px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  width: 100%;
   .select-menu {
     li {
       display: inline;
@@ -107,27 +108,41 @@ header {
   }
 }
 
+.card-field {
+  margin-bottom: 30px;
+}
+
 //card-index
 .top-middle {
-  position: absolute;
-  top: 450px;
   width: 100%;
+  margin-top: -50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .c-content {
   width: 23%;
-  height: 296px;
+  height: 310px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
   margin-top: 30px;
-  margin-left: 19px;
   border-radius: 5px;
+  background: #fff;
+  @media only screen and (max-width: $tb) {
+    width: 31%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 78%;
+    height: 46vh;
+  }
 }
 
 .c-head {
   position: relative;
-  height: 145px;
+  height: 49%;
   box-sizing: border-box;
   .top-image {
     height: 100%;
@@ -142,7 +157,7 @@ header {
 }
 
 .c-middle {
-  height: 98px;
+  height: 33%;
   margin-top: 10px;
   font-size: 13px;
   box-sizing: border-box;
@@ -158,6 +173,7 @@ header {
   box-sizing: border-box;
   align-items: center;
   padding-top: 4px;
+  font-weight: bold;
   .top-question {
     height: 100%;
     color: #cccccc;
@@ -170,7 +186,7 @@ header {
 }
 
 .c-foot {
-  height: 47px;
+  height: 18%;
   width: 100%;
   position: relative;
   box-sizing: border-box;
