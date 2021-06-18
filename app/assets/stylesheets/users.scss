@@ -224,14 +224,25 @@ $tb: 1024px;
   height: 296px;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  margin-right: 40px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  @media only screen and (max-width: $tb) {
+    width: 31%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 78%;
+    height: 46vh;
+  }
 }
 
 .your-post {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
   color: #d9d8d7;
 }
 
