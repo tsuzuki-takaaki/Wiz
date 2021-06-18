@@ -144,53 +144,45 @@ $tb: 1024px;
 
 .profile {
   height: 100%;
-  width: 55%;
+  width: 50%;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
   .profile-left {
-    width: 40%;
-    height: 100%;
-    box-sizing: border-box;
-    padding-top: 30px;
-    padding-left: 100px;
-  }
-  .profile-right {
-    width: 50%;
+    width: 25%;
     height: 75%;
     box-sizing: border-box;
-    margin: auto 0;
+    .user-icon img {
+      border-radius: 400px;
+      height: 63%;
+      width: 75%;
+      vertical-align: bottom;
+    }
+    .profile-name {
+      height: 30%;
+      h3 {
+        margin-top: auto;
+      }
+      h5 {
+        margin-top: -20px;
+      }
+      a {
+        color: #040dc2;
+      }
+    }
+  }
+  .profile-right {
+    width: 60%;
+    height: 65%;
+    box-sizing: border-box;
     h4 {
-      margin-bottom: -15px;
       width: 80%;
     }
     p {
       height: 50%;
       width: 80%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-left: 25px;
     }
-  }
-}
-
-.user-icon img {
-  border-radius: 400px;
-  height: 100px;
-  width: 100px;
-  vertical-align: bottom;
-}
-
-.profile-name {
-  height: 30%;
-  h3 {
-    margin-top: auto;
-  }
-  h5 {
-    margin-top: -20px;
-  }
-  a {
-    color: #040dc2;
   }
 }
 
@@ -198,13 +190,18 @@ $tb: 1024px;
   display: block;
   height: 50%;
   width: 80%;
-  padding-top: 11px;
+  padding:10px 0;
   font-size: 20px;
   color: #fff;
   border: 1px solid #07f78f;
   border-radius: 3px;
   background: #07f78f;
 }
+
+
+
+
+
 //user-card
 .about-post {
   height: 60%;
