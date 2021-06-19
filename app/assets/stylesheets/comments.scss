@@ -5,7 +5,7 @@
   overflow: scroll;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(black, 0.2);
-  background-color: #fff;
+  background-color: #aff283;
   &::-webkit-scrollbar {
     display:none;
   }
@@ -28,7 +28,7 @@
   width: 35%;
   border-radius: 10px;
   color: #1a091a;
-  background: #aff283;
+  background: #fff;
   margin-top: 50px;
   font-size: 11px;
 }
@@ -42,7 +42,7 @@
     left: 100%;
     margin-top: -15px;
     border: 15px solid transparent;
-    border-left: 15px solid #aff283;
+    border-left: 15px solid #fff;
   }
 }
 
@@ -55,7 +55,7 @@
     left: -25%;
     margin-top: -15px;
     border: 15px solid transparent;
-    border-right: 15px solid #aff283;
+    border-right: 15px solid #fff;
   }
 }
 

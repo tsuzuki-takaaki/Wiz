@@ -2,8 +2,10 @@ $sp: 428px;
 $tb: 1024px;
 //show
 .for-post li {
-  color: #fff;
-  text-shadow: none;
+  a {
+    color: black;
+    text-shadow: none;
+  }
 }
 
 .post-container {
@@ -12,7 +14,7 @@ $tb: 1024px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: linear-gradient(#f68084,#a6c0fe);
+  background: #fff;
 }
 
 .post-card {
@@ -99,7 +101,7 @@ $tb: 1024px;
 }
 
 .comment-title {
-  color: #fff;
+  color: #1a091a;
   font-size: 18px;
   font-weight: bold;
   padding-top: 8px;
