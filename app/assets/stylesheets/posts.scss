@@ -10,6 +10,7 @@ $tb: 1024px;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   background: linear-gradient(#f68084,#a6c0fe);
 }
@@ -22,6 +23,17 @@ $tb: 1024px;
   margin-right: 60px;
   background-color: #fff;
   margin-top: 40px;
+  @media only screen and (max-width: $tb) {
+    width: 50%;
+    margin-right: 0;
+    margin-top: 70px;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 75%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 90%;
+  }
 }
 
 .post-image {
@@ -43,6 +55,9 @@ $tb: 1024px;
   display: flex;
   height: 12%;
   width: 65%;
+  @media only screen and (max-width: $sp) {
+    width: 80%;
+  }
   margin: 0 auto;
   border-bottom: 1px solid #cccccc;
   justify-content: space-between;
@@ -70,8 +85,17 @@ $tb: 1024px;
 
 .comment-field {
   width: 30%;
-  height: 75%;
+  height: 85%;
   margin-top: 35px;
+  @media only screen and (max-width: $tb) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 75%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 90%;
+  }
 }
 
 .comment-title {
