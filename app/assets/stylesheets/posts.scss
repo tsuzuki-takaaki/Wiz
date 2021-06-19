@@ -2,16 +2,20 @@ $sp: 428px;
 $tb: 1024px;
 //show
 .for-post li {
-  color: #fff;
-  text-shadow: none;
+  a {
+    color: black;
+    text-shadow: none;
+  }
 }
 
 .post-container {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  background: linear-gradient(#f68084,#a6c0fe);
+  align-items: center;
+  background: #fff;
 }
 
 .post-card {
@@ -21,7 +25,27 @@ $tb: 1024px;
   border-radius: 5px;
   margin-right: 60px;
   background-color: #fff;
-  margin-top: 40px;
+  @media only screen and (max-width: $tb) {
+    width: 50%;
+    margin-top: 70px;
+    margin-right: 0;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 75%;
+    margin-right: 0;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 90%;
+  }
+  @media only screen and (min-height: 750px) {
+    height: 68%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 60%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 55%;
+  }
 }
 
 .post-image {
@@ -43,6 +67,9 @@ $tb: 1024px;
   display: flex;
   height: 12%;
   width: 65%;
+  @media only screen and (max-width: $sp) {
+    width: 80%;
+  }
   margin: 0 auto;
   border-bottom: 1px solid #cccccc;
   justify-content: space-between;
@@ -70,12 +97,31 @@ $tb: 1024px;
 
 .comment-field {
   width: 30%;
-  height: 75%;
-  margin-top: 35px;
+  height: 85%;
+  margin-top: -30px;
+  @media only screen and (max-width: $tb) {
+    width: 50%;
+    margin-top: 0;
+  }
+  @media only screen and (max-width: 720px) {
+    width: 75%;
+  }
+  @media only screen and (max-width: $sp) {
+    width: 90%;
+  }
+  @media only screen and (min-height: 800px) {
+    height: 65%;
+  }
+  @media only screen and (min-height: 1000px) {
+    height: 55%;
+  }
+  @media only screen and (min-height: 1100px) {
+    height: 50%;
+  }
 }
 
 .comment-title {
-  color: #fff;
+  color: #1a091a;
   font-size: 18px;
   font-weight: bold;
   padding-top: 8px;
@@ -110,7 +156,7 @@ $tb: 1024px;
     cursor: pointer;
   }
   @media only screen and (max-width: $tb) {
-    width: 50%;
+    width: 40%;
   }
   @media only screen and (max-width: 720px) {
     width: 75%;

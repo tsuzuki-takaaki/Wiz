@@ -70,10 +70,7 @@
     </div>
   </div>
   <div class="comment-field">
-    <div class="post-by">
-      <h2>Posted by <span><%= @post.user.name %></span></h2>
-    </div>
-    <p class="comment-title">Questions</p>
+    <p class="comment-title"><%= @comments.count %> Comments</p>
     <div class="comment-area">
       <%= render partial: 'comments/index', locals: { comments: @comments, user: @user } %>
     </div>
