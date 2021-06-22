@@ -77,5 +77,8 @@
     <div class="comment-create">
       <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
     </div>
+    <div class="error-explanation">
+      <%= render partial: 'comments/error', locals: { comment: @comment } %>
+    </div>
   </div>
 </div>

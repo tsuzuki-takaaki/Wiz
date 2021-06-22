@@ -56,3 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 
 gem 'devise'
+
+gem 'devise-i18n'
+
+gem 'rails-i18n'

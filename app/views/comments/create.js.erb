@@ -1,5 +1,6 @@
 $(function(){
   $("textarea").val('')
+  $(".error-explanation").html("<%=escape_javascript(render partial: 'comments/error', locals: { comment: @comment }) %>")
   $(".comment-area").html("<%= escape_javascript(render partial: 'comments/index', locals: { comments: @comments, user: @user}) %>")
   $(".comment-area").animate({ scrollTop: $(".comment-area")[0].scrollHeight});
 });

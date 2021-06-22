@@ -23,7 +23,8 @@
   </div>
 </header>
 <div class="post-container">
-    <%= form_with model: @post do |f| %>
+  <%= render partial: 'posts/errors', locals: { post:@post } %>
+  <%= form_with model: @post do |f| %>
     <div class="form-content">
       <div class="post-photo">
         <%= image_tag @post.image_name1.url, id: "preview" %>
@@ -59,7 +60,7 @@
         <%= f.submit "Share", class:"submit-form"%>
       </div>
     </div>
-    <% end %>
+  <% end %>
     <div class="post-delete">
       <%= link_to("delete post", post_path, {method:"delete", data: { confirm: "削除しますか？"}}) %>
     </div>

@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        country: 国
+        howlong: 期間
+        visa: ビザの種類
+        schoolname: 学校名
+        city: 地域
+        money: 費用
+        agent: エージェント
+        necessity: 必需品
+        image_name1: 画像
+      comment:
+        content: コメント
