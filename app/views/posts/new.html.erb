@@ -23,7 +23,8 @@
   </div>
 </header>
 <div class="post-container">
-    <%= form_with model: @post do |f| %>
+  <%= render partial: 'posts/errors', locals: { post:@post } %>
+  <%= form_with model: @post do |f| %>
     <div class="form-content">
       <div class="post-photo">
         <%= image_tag "/no_image1.png", id: "preview" %>
@@ -59,5 +60,5 @@
         <%= f.submit "Share", class:"submit-form"%>
       </div>
     </div>
-    <% end %>
+  <% end %>
 </div>

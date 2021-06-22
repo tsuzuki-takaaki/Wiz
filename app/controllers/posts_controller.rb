@@ -8,8 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to(post_path(@post.id))
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to(post_path(@post.id))
+    else
+      render("posts/new")
+    end
   end
   
   def show
@@ -25,8 +29,11 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by(id: params[:id])
-    @post = @post.update(post_params)
-    redirect_to(root_path)
+    if @post.update(post_params)
+      redirect_to(root_path)
+    else
+      render("posts/edit")
+    end
   end
 
   def destroy
