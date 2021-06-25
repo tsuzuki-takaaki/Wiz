@@ -6,4 +6,8 @@ $(function() {
     }
     reader.readAsDataURL(e.target.files[0]);
   });
+
+  $(function(){
+    setTimeout("$('.flash').fadeOut('slow')", 3000);
+  });
 });
