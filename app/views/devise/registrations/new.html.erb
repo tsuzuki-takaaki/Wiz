@@ -1,4 +1,16 @@
 <% @page_title = "Signup"%>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-devise">
+      <li>
+        <%= link_to("Top", root_path) %>
+      </li>
+      <li>
+        <%= link_to("Back", :back) %>
+      </li>
+    </ul>
+  </div>
+</header>
 <div class="user-container">
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="user-card signup">

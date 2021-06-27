@@ -1,4 +1,16 @@
 <% @page_title = "Edit"%>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-devise">
+      <li>
+        <%= link_to("Top", root_path) %>
+      </li>
+      <li>
+        <%= link_to("Back", :back) %>
+      </li>
+    </ul>
+  </div>
+</header>
 <div class="user-container">
   <div class="user-card edit">
     <h2>Edit <%= resource_name.to_s.humanize %></h2>

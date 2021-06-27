@@ -7,6 +7,13 @@ $tb: 1024px;
   background-color: #3cad7e;
 }
 
+.for-devise li {
+  a {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
 //devise error
 #error_explanation h2, li {
   margin: 0;
