@@ -28,7 +28,10 @@ $tb: 1024px;
     color: #3cad7e;
   }
   @media only screen and (max-width: $tb) {
-    width: 62%;
+    width: 40%;
+  }
+  @media only screen and (max-width: 770px) {
+    width: 55%;
   }
   @media only screen and (max-width: $sp) {
     width: 85%;
