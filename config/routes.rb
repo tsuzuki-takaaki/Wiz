@@ -1,5 +1,9 @@
 Rails.application.routes.draw do 
 
+  get "contact/new" => "contact/new"
+  post "contact/confirm" => "contact/confirm"
+  post "contact/thanks" => "contact/thanks"
+
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }

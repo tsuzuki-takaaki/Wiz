@@ -1,0 +1,12 @@
+<%= form_with model: @contact, url: contact_confirm_path do |f| %>
+
+  <div class="contact-form">
+    <%= f.label :message, "お問い合わせ" %>
+    <%= f.text_area :message %>
+  </div>
+
+  <div>
+    <%= f.submit '入力内容確認' %>
+  </div>
+
+<% end %>

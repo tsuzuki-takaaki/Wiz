@@ -1,0 +1,13 @@
+<%= form_with model: @contact, url: contact_thanks_path do |f| %>
+
+  <div class="contact-confirm">
+    <p>お問い合わせ内容</p>
+    <%= f.hidden_field :message %>
+    <%= @contact.message %>
+  </div>
+
+  <div>
+    <%= f.submit '送信' %>
+  </div>
+
+<% end %>
