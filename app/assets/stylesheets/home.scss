@@ -44,12 +44,18 @@ footer {
   height: 200px;
   width: 100%;
   background-color: rgba(73,71,77,0.7);
-}
-
-.copy-right {
-  color: #fff;
-  position: relative;
-  top: 90px;
+  .footer-instruction {
+    position: relative;
+    top: 55px;
+    .footer-question {
+      a {
+        color: #fff;
+      }
+    }
+    .copy-right {
+      color: #fff;
+    }
+  }
 }
 
 //flash

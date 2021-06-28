@@ -54,6 +54,8 @@
   <%= render partial: 'home/top', locals: {posts:@posts} %>
 </div>
 <footer>
-  <p class="copy-right">&copy; 2021 Wiz</p>
-  <p><%= link_to("お問い合わせ", contact_new_path) %></p>
+  <div class="footer-instruction">
+    <p class="footer-question"><%= link_to("お問い合わせ", contact_new_path) %></p>
+    <p class="copy-right">&copy; 2021 Wiz</p>
+  </div>
 </footer>
