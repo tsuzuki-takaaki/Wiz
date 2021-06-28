@@ -1,3 +1,53 @@
-// Place all the styles related to the contact controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//new
+.contact-container {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  height: 60%;
+  width: 60%;
+}
+
+.contact-input {
+  font-size: 18px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.contact-submit {
+  margin-top: 20px;
+  input {
+    color: #fff;
+    background-color:  #07f78f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.submit-contact {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 25px;
+}
+
+//thanks
+.thanks-container {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-thanks {
+  color: red;
+}
