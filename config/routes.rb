@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   get "home/southafrica" => "home#southafrica"
   get "home/malta" => "home#malta"
   get "home/philippines" => "home#philippines"
+  get "home/terms" => "home#terms"
+  get "home/privacy" => "home#privacy"
   
 end

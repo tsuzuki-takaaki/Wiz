@@ -35,5 +35,11 @@ class HomeController < ApplicationController
   def philippines
     @posts = Post.where(country: "thePhilippines").includes(:user)
   end
+
+  def privacy
+  end
+
+  def terms
+  end
   
 end

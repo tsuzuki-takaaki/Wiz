@@ -95,11 +95,27 @@ $tb: 1024px;
   @media only screen and (min-height: 800px) {
     height: 60%;
   }
+  @media only screen and (min-height: 850px) {
+    height: 54%;
+  }
   @media only screen and (min-height: 1000px) {
     height: 50%;
   }
   @media only screen and (min-height: 1100px) {
     height: 45%;
+  }
+}
+
+.privacy {
+  @media only screen and (min-height: 1023px) {
+    margin-top: 50px;
+  }
+  p {
+    text-align: left;
+    font-size: 14px;
+    a {
+      color: blue;
+    }
   }
 }
 

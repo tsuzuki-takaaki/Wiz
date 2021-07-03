@@ -35,7 +35,11 @@
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
-
     <%= render "devise/shared/links" %>
+    <div class="privacy">
+      <p>
+        アカウントを作成すると、<%= link_to("利用規約", home_terms_path) %>および<%= link_to("プライバシーポリシー", home_privacy_path) %>に同意したことになります。
+      </p>
+    </div>
   </div>
 </div>
