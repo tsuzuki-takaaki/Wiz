@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.save
     @comments = @post.comments.order(created_at: :asc)
-    NotificationMailer.notify_mail(@user, @comment).deliver_later
+    unless @user == @comment.user
+      NotificationMailer.notify_mail(@user, @comment).deliver_later
+    end
   end
 
   def destroy
