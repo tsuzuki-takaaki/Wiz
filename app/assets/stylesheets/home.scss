@@ -220,3 +220,25 @@ footer {
   background:linear-gradient(to right, #fa5277, #f7c154);
   color: #fff;
 }
+
+//privacy
+.for-privacy li {
+  a {
+    color: black;
+    text-shadow: none;
+  }
+}
+
+.privacy-page {
+  width: 65%;
+  margin: 0 auto;
+  p {
+    text-align: left;
+  }
+  li {
+    list-style-type: decimal;
+    color: black;
+    text-align: left;
+    margin-top: 10px;
+  }
+}
