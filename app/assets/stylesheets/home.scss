@@ -44,12 +44,18 @@ footer {
   height: 200px;
   width: 100%;
   background-color: rgba(73,71,77,0.7);
-}
-
-.copy-right {
-  color: #fff;
-  position: relative;
-  top: 90px;
+  .footer-instruction {
+    position: relative;
+    top: 55px;
+    .footer-question {
+      a {
+        color: #fff;
+      }
+    }
+    .copy-right {
+      color: #fff;
+    }
+  }
 }
 
 //flash
@@ -70,7 +76,7 @@ footer {
     content: "";
     position: absolute;
     top: 60%;
-    left: 95%;
+    left: 97%;
     margin-top: -15px;
     border: 15px solid transparent;
     border-left: 15px solid #fa5277;
@@ -213,4 +219,26 @@ footer {
   border-radius: 4px;
   background:linear-gradient(to right, #fa5277, #f7c154);
   color: #fff;
+}
+
+//privacy
+.for-privacy li {
+  a {
+    color: black;
+    text-shadow: none;
+  }
+}
+
+.privacy-page {
+  width: 65%;
+  margin: 0 auto;
+  p {
+    text-align: left;
+  }
+  li {
+    list-style-type: decimal;
+    color: black;
+    text-align: left;
+    margin-top: 10px;
+  }
 }

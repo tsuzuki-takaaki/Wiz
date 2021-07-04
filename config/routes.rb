@@ -1,6 +1,12 @@
 Rails.application.routes.draw do 
 
-  devise_for :users
+  get "contact/new" => "contact/new"
+  post "contact/confirm" => "contact/confirm"
+  post "contact/thanks" => "contact/thanks"
+
+  devise_for :users, controllers: {
+    registrations: "users/registrations"
+  }
 
   resources :users, only: [:show]
 
@@ -18,5 +24,7 @@ Rails.application.routes.draw do
   get "home/southafrica" => "home#southafrica"
   get "home/malta" => "home#malta"
   get "home/philippines" => "home#philippines"
+  get "home/terms" => "home#terms"
+  get "home/privacy" => "home#privacy"
   
 end

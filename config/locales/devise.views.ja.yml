@@ -25,6 +25,7 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+        name: ユーザーネーム
     models:
       user: ユーザー
   devise:
@@ -49,12 +50,12 @@ ja:
         action: メールアドレスの確認
         greeting: "%{recipient}様"
         instruction: 以下のリンクをクリックし、メールアドレスの確認手続を完了させてください。
-        subject: メールアドレス確認メール
+        subject:
       email_changed:
         greeting: こんにちは、%{recipient}様。
         message: メールアドレスの（%{email}）変更が完了したため、メールを送信しています。
         message_unconfirmed: メールアドレスが（%{email}）変更されたため、メールを送信しています。
-        subject: メール変更完了
+        subject: メールアドレスの変更完了
       password_change:
         greeting: "%{recipient}様"
         message: パスワードが再設定されました。

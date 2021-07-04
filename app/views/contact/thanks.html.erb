@@ -1,0 +1,26 @@
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-post">
+      <li>
+        <%= link_to("Top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("Logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("Login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="thanks-container">
+  <h1 class="contact-thanks">Thank you!</h1>
+</div>

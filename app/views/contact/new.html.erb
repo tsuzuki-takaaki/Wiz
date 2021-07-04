@@ -1,0 +1,37 @@
+<% @page_title = "contact" %>
+<header>
+  <div class="header-logo">
+    <ul class="header-menu for-post">
+      <li>
+        <%= link_to("Top", root_path) %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user.id)) %>
+      </li>
+      <li>
+        <%= link_to("Logout", destroy_user_session_path, {method: "delete"}) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to("Login", new_user_session_path) %> 
+      <li>
+        <%= link_to("Signup", new_user_registration_path) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<div class="contact-container">
+  <div class="contact-content">
+    <h3>お問い合わせ</h3>
+    <%= form_with model: @contact, url: contact_confirm_path do |f| %>
+      <div class="contact-form">
+        <%= f.text_area :message, rows: 15, class: "contact-input", placeholder: "改善点や質問がございましたらご入力ください。"  %>
+      </div>
+      <div class="contact-submit">
+        <%= f.submit '入力内容確認', class: "submit-contact" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -7,6 +7,13 @@ $tb: 1024px;
   background-color: #3cad7e;
 }
 
+.for-devise li {
+  a {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
 //devise error
 #error_explanation h2, li {
   margin: 0;
@@ -28,7 +35,10 @@ $tb: 1024px;
     color: #3cad7e;
   }
   @media only screen and (max-width: $tb) {
-    width: 62%;
+    width: 40%;
+  }
+  @media only screen and (max-width: 770px) {
+    width: 55%;
   }
   @media only screen and (max-width: $sp) {
     width: 85%;
@@ -38,6 +48,10 @@ $tb: 1024px;
 .other-option a {
   color: #fab30f;
   font-weight: bold;
+}
+
+.instructions {
+  display: none;
 }
 
 .box input {
@@ -81,11 +95,27 @@ $tb: 1024px;
   @media only screen and (min-height: 800px) {
     height: 60%;
   }
+  @media only screen and (min-height: 850px) {
+    height: 54%;
+  }
   @media only screen and (min-height: 1000px) {
     height: 50%;
   }
   @media only screen and (min-height: 1100px) {
     height: 45%;
+  }
+}
+
+.privacy {
+  @media only screen and (min-height: 1023px) {
+    margin-top: 50px;
+  }
+  p {
+    text-align: left;
+    font-size: 14px;
+    a {
+      color: blue;
+    }
   }
 }
 
@@ -238,6 +268,7 @@ $tb: 1024px;
 }
 
 .not-yet {
+  margin-top: 60px;
   color: #d9d8d7;
 }
 //user-card
