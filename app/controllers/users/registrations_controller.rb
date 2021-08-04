@@ -10,12 +10,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-     super do
-      resource.skip_confirmation!
-      resource.save
-     end
-  end
+  # def create
+  # end
 
   # GET /resource/edit
   # def edit
