@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   post "contact/confirm" => "contact/confirm"
   post "contact/thanks" => "contact/thanks"
 
-  devise_for :users, controllers: {
-    registrations: "users/registrations"
-  }
+  devise_for :users
 
   resources :users, only: [:show]
 

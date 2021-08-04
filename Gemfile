@@ -5,8 +5,6 @@ ruby '2.5.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -29,6 +27,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'dotenv-rails'
+
+  # Use mysql as the database for Active Record
+  gem 'mysql2', '~> 0.5'
+  
 end
 
 group :development do
@@ -61,4 +65,6 @@ gem 'devise-i18n'
 
 gem 'rails-i18n'
 
-gem 'dotenv-rails'
+group :production do
+  gem 'pg'
+end

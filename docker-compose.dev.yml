@@ -1,18 +1,14 @@
 version: '3'
 services:
   db:
-    image: postgres
-    environment: 
-      POSTGRES_USER: <%= ENV['APP_DATABASE_USERNAME'] %>
-      POSTGRES_PASSWORD: <%= ENV['APP_DATABASE_PASSWORD'] %>
-      PGDATA: /var/lib/postgresql/data/pgdata
+    image: mysql:8.0
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - ./tmp/db:/var/lib/mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    environment:
-      RAILS_ENV: production
     volumes:
       - .:/app
       - gem_data:/usr/local/bundle
