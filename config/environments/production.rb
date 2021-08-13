@@ -117,4 +117,17 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  #mailer setting
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => ENV['MAILGUN_SMTP_SERVER'],
+    :port => ENV['MAILGUN_SMTP_PORT'],
+    :user_name => ENV['MAILGUN_SMTP_LOGIN'],
+    :password => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'wiz1999.heroku.com',
+    :authentication => :plain,
+  }
+
 end

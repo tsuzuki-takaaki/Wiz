@@ -9,6 +9,5 @@ class Post < ApplicationRecord
   validates :schoolname, {presence:true}
   validates :city, {presence:true}
   validates :money, {presence:true}
-  validates :image_name1, {presence:true}
   validates :user_id, {presence:true}
 end
