@@ -19,7 +19,11 @@
   <%= form_with model: @post do |f| %>
     <div class="form-content">
       <div class="post-photo">
-        <%= image_tag @post.image_name1.url, id: "preview" %>
+        <%if @post.image_name1? %>
+          <%= image_tag @post.image_name1.url, id: "preview" %>
+        <% else %>
+          <%= image_tag "/no_image1.png" %>
+        <% end %>
         <%= f.file_field :image_name1, id: "post_image" %>
       </div>
       <div class="without-photo">

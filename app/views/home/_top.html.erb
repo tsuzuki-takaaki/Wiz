@@ -3,7 +3,11 @@
   <div class="c-content">
     <div class="c-head">
       <div class="top-image">
-        <%= image_tag post.image_name1.url if post.image_name1? %>
+        <% if post.image_name1? %>
+          <%= image_tag post.image_name1.url %>
+        <% else %>
+          <%= image_tag "/no_image1.png" %>
+        <% end %>
       </div>
     </div> 
     <div class="c-middle">
