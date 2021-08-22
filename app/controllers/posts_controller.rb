@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to(post_path(@post.id))
     else
@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = @post.user
     @comment = Comment.new
-    @comments = @post.comments.includes(:user, :post).order(created_at: :asc)
+    @comments = @post.comments.includes(:user).order(created_at: :asc)
   end
 
   def edit
