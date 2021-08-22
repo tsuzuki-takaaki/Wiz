@@ -121,13 +121,15 @@ Rails.application.configure do
   #mailer setting
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
-    :address => ENV['MAILGUN_SMTP_SERVER'],
-    :port => ENV['MAILGUN_SMTP_PORT'],
-    :user_name => ENV['MAILGUN_SMTP_LOGIN'],
-    :password => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'wiz1999.heroku.com',
+    :user_name => 'apikey',
+    :password => ENV['SENDGRID_API_KEY'],
+    :domain => 'heroku.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
     :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
 end
