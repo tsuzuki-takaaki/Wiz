@@ -1,24 +1,9 @@
-# README
+<div align="center">
+<samp>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Wiz
 
-Things you may want to cover:
+this is my first Rails application!!!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+</samp>
+</div>
